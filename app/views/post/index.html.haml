@@ -105,15 +105,9 @@
 
               %img.featurette-image.img-responsive{:alt => "Generic placeholder image", "data-src" => "holder.js/500x500/auto"}
           %hr.featurette-divider
-            / /END THE FEATURETTES
-            / FOOTER
             %footer
               %p.pull-right
-                %a{:href => "#"} Back to top
-              %p
-                \&copy; 2014 Company, Inc. &middot;
-                %a{:href => "#"} Privacy
-                \&middot;
-                %a{:href => "#"} Terms
+                %a{:href => "/"} Back to top
+
   - content_for :javascript do
     = javascript_include_tag 'holder'
