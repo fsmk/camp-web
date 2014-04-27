@@ -6,6 +6,7 @@ FsmkCampWebsite::Application.routes.draw do
   root 'post#index'
 
   resources :post
+  get '/about' => 'post#about'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
