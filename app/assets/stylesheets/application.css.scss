@@ -9,7 +9,12 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
+ *= require carousel
  *= require_tree .
  */
 
 @import "bootstrap";
+
+.pull-down{
+  margin-top: 100px;
+}
