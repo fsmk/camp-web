@@ -6,7 +6,8 @@
     %li{"data-slide-to" => "2", "data-target" => "#myCarousel"}
   .carousel-inner
     .item.active
-      %img{:alt => "First slide", "data-src" => "holder.js/900x500/auto/#777:#7a7a7a/text:First slide"}
+
+      %img{:alt => "First slide", "data-src" => "/vendor/assets/javascripts/holder.js/900x500/auto/#777:#7a7a7a/text:First slide"}
         .container
           .carousel-caption
             %h1 Example headline.
@@ -17,7 +18,8 @@
             %p
               %a.btn.btn-lg.btn-primary{:href => "#", :role => "button"} Sign up today
     .item
-      %img{:alt => "Second slide", "data-src" => "holder.js/900x500/auto/#666:#6a6a6a/text:Second slide"}
+
+      %img{:alt => "Second slide", "data-src" => "/vendor/assets/javascripts/holder.js/900x500/auto/#666:#6a6a6a/text:Second slide"}
         .container
           .carousel-caption
             %h1 Another example headline.
@@ -25,7 +27,8 @@
             %p
               %a.btn.btn-lg.btn-primary{:href => "#", :role => "button"} Learn more
     .item
-      %img{:alt => "Third slide", "data-src" => "holder.js/900x500/auto/#555:#5a5a5a/text:Third slide"}
+
+      %img{:alt => "Third slide", "data-src" => "/vendor/assets/javascripts/holder.js/900x500/auto/#555:#5a5a5a/text:Third slide"}
         .container
           .carousel-caption
             %h1 One more for good measure.
@@ -45,21 +48,24 @@
   / Three columns of text below the carousel
   .row
     .col-lg-4
-      %img.img-circle{:alt => "Generic placeholder image", "data-src" => "holder.js/140x140"}
+
+      %img.img-circle{:alt => "Generic placeholder image", "data-src" => "/vendor/assets/javascripts/holder.js/140x140"}
         %h2 Heading
         %p Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.
         %p
           %a.btn.btn-default{:href => "#", :role => "button"} View details &raquo;
     / /.col-lg-4
     .col-lg-4
-      %img.img-circle{:alt => "Generic placeholder image", "data-src" => "holder.js/140x140"}
+
+      %img.img-circle{:alt => "Generic placeholder image", "data-src" => "/vendor/assets/javascripts/holder.js/140x140"}
         %h2 Heading
         %p Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
         %p
           %a.btn.btn-default{:href => "#", :role => "button"} View details &raquo;
     / /.col-lg-4
     .col-lg-4
-      %img.img-circle{:alt => "Generic placeholder image", "data-src" => "holder.js/140x140"}
+
+      %img.img-circle{:alt => "Generic placeholder image", "data-src" => "/vendor/assets/javascripts/holder.js/140x140"}
         %h2 Heading
         %p Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
         %p
@@ -75,11 +81,13 @@
           %span.text-muted It'll blow your mind.
         %p.lead Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
       .col-md-5
-        %img.featurette-image.img-responsive{:alt => "Generic placeholder image", "data-src" => "holder.js/500x500/auto"}
+
+        %img.featurette-image.img-responsive{:alt => "Generic placeholder image", "data-src" => "/vendor/assets/javascripts/holder.js/500x500/auto"}
     %hr.featurette-divider
       .row.featurette
         .col-md-5
-          %img.featurette-image.img-responsive{:alt => "Generic placeholder image", "data-src" => "holder.js/500x500/auto"}
+
+          %img.featurette-image.img-responsive{:alt => "Generic placeholder image", "data-src" => "/vendor/assets/javascripts/holder.js/500x500/auto"}
         .col-md-7
           %h2.featurette-heading
             Oh yeah, it's that good.
@@ -93,7 +101,8 @@
               %span.text-muted Checkmate.
             %p.lead Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
           .col-md-5
-            %img.featurette-image.img-responsive{:alt => "Generic placeholder image", "data-src" => "holder.js/500x500/auto"}
+
+            %img.featurette-image.img-responsive{:alt => "Generic placeholder image", "data-src" => "/vendor/assets/javascripts/holder.js/500x500/auto"}
         %hr.featurette-divider
           / /END THE FEATURETTES
           / FOOTER
@@ -105,3 +114,5 @@
               %a{:href => "#"} Privacy
               \&middot;
               %a{:href => "#"} Terms
+- content_for :javascript do
+  = javascript_include_tag '/vendor/assets/javascripts/holder'
