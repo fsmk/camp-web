@@ -1,3 +1,13 @@
 // Place all the styles related to the post controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.green, %label{
+  color: green;
+}
+input, textarea, select {
+  border: 2px solid #bbb;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
