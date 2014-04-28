@@ -8,6 +8,9 @@ FsmkCampWebsite::Application.routes.draw do
   resources :post
   get '/about' => 'post#about'
   get '/contact_us' => 'post#contact'
+  get '/speakers' => 'post#speakers'
+  get '/technologies' => 'post#technologies'
+  get '/sponsors' => 'post#sponsors'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
