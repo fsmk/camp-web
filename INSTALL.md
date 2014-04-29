@@ -17,7 +17,7 @@ Clone the source from git from [here](https://github.com/fsmk/camp-web) using th
 To install all the dependent gems needed for running the camp site, run the following command.
 <pre>
 
-    build install
+    bundle install
     
 </pre>
 
@@ -26,7 +26,7 @@ To install all the dependent gems needed for running the camp site, run the foll
 Run the following command to tell Rails that this is a development environment.
 <pre>
 
-    bin/rake db:migrate RAILS_ENV=development
+    rake db:migrate
     
 </pre>
 
