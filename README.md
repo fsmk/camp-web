@@ -15,7 +15,7 @@ Clone the source from git from [here](https://github.com/fsmk/camp-web) using th
 ### Installing all dependent gems
 To install all the dependent gems needed for running the camp site, run the following command.
 
-    `bundle install`
+    bundle install
     
 
 
@@ -23,13 +23,13 @@ To install all the dependent gems needed for running the camp site, run the foll
 
 Run the following command to tell Rails that this is a development environment.
 
-    `rake db:migrate`
+    rake db:migrate
     
 
 ### Running the Rails Server
 Start the server using the following command. 
 
-    `rails server`
+    rails server
     
 After this, the camp website should be running at http://localhost:3000
 
