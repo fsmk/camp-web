@@ -8,7 +8,7 @@ Follow the following [link](https://gorails.com/setup/ubuntu/13.10) to install R
 
 Clone the source from git from [here](https://github.com/fsmk/camp-web) using the command, 
 
-    `git clone https://github.com/fsmk/camp-web.git`
+    git clone https://github.com/fsmk/camp-web.git
      
 
 
