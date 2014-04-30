@@ -46,7 +46,6 @@ end
   gem 'haml'
 
 # Use jquery as the JavaScript library
-  gem 'jquery-rails'
 
 # Use SCSS for stylesheets
   gem 'sass-rails', '~> 4.0.2'
