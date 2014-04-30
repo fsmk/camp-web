@@ -1,0 +1,12 @@
+defaults: &defaults
+  flickr:
+    user_id: "12864272@N02"
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults

@@ -1,0 +1,66 @@
+.container.pull-down
+  .row
+    .col-sm-12
+
+      - if @photos.length == 0
+        No photo
+      - else
+        %h1 FSMK photo gallery
+        %blockquote
+          %p Some message here
+        %form.form-inline
+          .form-group
+            %button#image-gallery-button.btn.btn-primary.btn-lg{type: "button"}
+              %i.glyphicon.glyphicon-picture
+              Launch Image Gallery
+          .btn-group.pull-right{"data-toggle" => "buttons"}
+            %label.btn.btn-success.btn-lg
+              %i.glyphicon.glyphicon-leaf
+              %input#borderless-checkbox{type: "checkbox"}
+              Borderless
+            %label.btn.btn-primary.btn-lg
+              %i.glyphicon.glyphicon-fullscreen
+              %input#fullscreen-checkbox{type: "checkbox"}
+              Fullscreen
+        %br
+        #links
+          - @photos.each do |photo|
+            %a{"data-gallery" => "", href: photo.url, title: photo.title}
+              %img{alt: photo.title, src: photo.url(:thumbnail)}
+:javascript
+  $(function() {
+    var strVar="";
+    strVar += "<div id=\"blueimp-gallery\" class=\"blueimp-gallery\">";
+    strVar += "    <div class=\"slides\"><\/div>";
+    strVar += "    <h3 class=\"title\"><\/h3>";
+    strVar += "    <a class=\"prev\">‹<\/a>";
+    strVar += "    <a class=\"next\">›<\/a>";
+    strVar += "    <a class=\"close\">×<\/a>";
+    strVar += "    <a class=\"play-pause\"><\/a>";
+    strVar += "    <ol class=\"indicator\"><\/ol>";
+    strVar += "    <div class=\"modal fade\">";
+    strVar += "        <div class=\"modal-dialog\">";
+    strVar += "            <div class=\"modal-content\">";
+    strVar += "                <div class=\"modal-header\">";
+    strVar += "                    <button type=\"button\" class=\"close\" aria-hidden=\"true\">&times;<\/button>";
+    strVar += "                    <h4 class=\"modal-title\"><\/h4>";
+    strVar += "                <\/div>";
+    strVar += "                <div class=\"modal-body next\"><\/div>";
+    strVar += "                <div class=\"modal-footer\">";
+    strVar += "                    <button type=\"button\" class=\"btn btn-default pull-left prev\">";
+    strVar += "                        <i class=\"glyphicon glyphicon-chevron-left\"><\/i>";
+    strVar += "                        Previous";
+    strVar += "                    <\/button>";
+    strVar += "                    <button type=\"button\" class=\"btn btn-primary next\">";
+    strVar += "                        Next";
+    strVar += "                        <i class=\"glyphicon glyphicon-chevron-right\"><\/i>";
+    strVar += "                    <\/button>";
+    strVar += "                <\/div>";
+    strVar += "            <\/div>";
+    strVar += "        <\/div>";
+    strVar += "    <\/div>";
+    strVar += "<\/div>";
+
+    var new_modal = $(strVar).clone();
+    new_modal.appendTo('body');
+  });
