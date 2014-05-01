@@ -7,6 +7,7 @@ FsmkCampWebsite::Application.routes.draw do
 
   resources :post
   get '/about' => 'post#about'
+  get '/faq' => 'post#faq'
   get '/contact_us' => 'post#contact'
   post '/contact_us' => 'post#create_contact'
   get '/speakers' => 'post#speakers'
