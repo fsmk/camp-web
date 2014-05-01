@@ -15,4 +15,5 @@
 //= require turbolinks
 //= require holder
 //= require bootstrap
+//= require ./gallery_plugins
 //= require ./post
