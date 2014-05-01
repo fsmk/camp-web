@@ -1,4 +1,5 @@
 FsmkCampWebsite::Application.routes.draw do
+  get "users/register"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -14,7 +15,7 @@ FsmkCampWebsite::Application.routes.draw do
   get '/sponsors' => 'post#sponsors'
 
   resources :contact
-
+  resources :users	
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
