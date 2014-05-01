@@ -48,7 +48,6 @@ end
 # Use jquery as the JavaScript library
 
 # Use SCSS for stylesheets
-  gem 'sass-rails', '~> 4.0.2'
   gem 'bootstrap-sass'
 
 
@@ -66,3 +65,9 @@ end
 # gem 'debugger', group: [:development, :test]
 
 gem 'protected_attributes'
+
+#gallery
+gem 'flickr_fu'
+
+#settings
+gem 'settingslogic'
