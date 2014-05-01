@@ -2,10 +2,14 @@ class UsersController < ApplicationController
   def index
   end
   def new
-   @user = User.new		  
+   @user = User.new
   end
   def create
-    User.create params[:user] 
-    redirect_to root_url	 
-  end	  
+   @user = User.create params[:user]
+   if @user.save
+    redirect_to root_url
+   else
+    render 'new'
+   end
+  end
 end

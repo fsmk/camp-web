@@ -9,6 +9,7 @@
           %h4#myModalLabel.modal-title need logo of camp horizontal one
         .modal-body
           = form_for @user, url: users_path, method: :create do | form |
+            =render partial: 'shared/error_messages', locals { object: @user }
             =form.label "Your first name"
             =form.text_field :first_name, style: "width:50%;"
             %br
