@@ -3,19 +3,19 @@ FsmkCampWebsite::Application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
-  # You can have the root of your site routed with "root"
-  root 'post#index'
-
   resources :post
+  resources :contact
+  resources :users  
+  
   get '/about' => 'post#about'
   get '/contact_us' => 'post#contact'
   post '/contact_us' => 'post#create_contact'
   get '/speakers' => 'post#speakers'
   get '/technologies' => 'post#technologies'
   get '/sponsors' => 'post#sponsors'
-
-  resources :contact
-  resources :users	
+  get '/gallery' => 'post#gallery'
+  
+  root 'post#index'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

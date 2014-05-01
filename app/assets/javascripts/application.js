@@ -15,5 +15,5 @@
 //= require turbolinks
 //= require holder
 //= require bootstrap
-//= require_tree .
-ap
+//= require ./gallery_plugins
+//= require ./post

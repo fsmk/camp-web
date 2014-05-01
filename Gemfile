@@ -46,10 +46,8 @@ end
   gem 'haml'
 
 # Use jquery as the JavaScript library
-  gem 'jquery-rails'
 
 # Use SCSS for stylesheets
-  gem 'sass-rails', '~> 4.0.2'
   gem 'bootstrap-sass'
 
 
@@ -67,3 +65,9 @@ end
 # gem 'debugger', group: [:development, :test]
 
 gem 'protected_attributes'
+
+#gallery
+gem 'flickr_fu'
+
+#settings
+gem 'settingslogic'
