@@ -12,8 +12,11 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.ui.autocomplete
 //= require turbolinks
 //= require holder
 //= require bootstrap
 //= require ./gallery_plugins
+//= require ./plugins/bootstrapValidator
 //= require ./post
+//= require ./register
