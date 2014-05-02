@@ -71,3 +71,6 @@ gem 'flickr_fu'
 
 #settings
 gem 'settingslogic'
+
+#jquery ui
+gem 'jquery-ui-rails'
