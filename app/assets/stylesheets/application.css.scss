@@ -11,7 +11,7 @@
  *= require jquery.ui.autocomplete
  *= require_self
  *= require carousel
- *= require_tree .
+ *= require_tree ./plugins
  */
 
 @import "bootstrap";
@@ -34,3 +34,12 @@
 }
 
 .ui-autocomplete { z-index:2147483647; }
+
+input, textarea, select {
+  border: 2px solid #bbb;
+  width: 100%;
+  margin-bottom: 15px;
+}
+.green, %label{
+  color: green;
+}

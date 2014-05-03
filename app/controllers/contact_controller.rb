@@ -8,7 +8,7 @@ class ContactController < ApplicationController
   end
 
   def create
-    @contact = Contact.create params[:contact]
+    @contact = Contact.new contact_params
     if @contact.save
       redirect_to root_url
     else
@@ -23,6 +23,11 @@ class ContactController < ApplicationController
   end
 
   def destroy
+  end
+
+  private
+  def contact_params
+    params.require(:contact).permit(:name, :contact_email, :mobile, :message)
   end
 
 end
