@@ -6,11 +6,16 @@ class UsersController < ApplicationController
    @user = User.new
   end
   def create
-   @user = User.create params[:user]
+   @user = User.new(user_params)
    if @user.save
     redirect_to root_url
    else
     render 'new'
    end
+  end
+
+  private
+  def user_params
+    params.require(:user).permit(:first_name, :last_name, :gender, :college, :dept, :sem, :getting_laptop, :city, :state, :email, :phone, :previous_camp)
   end
 end
