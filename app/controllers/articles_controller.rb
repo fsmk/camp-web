@@ -2,12 +2,10 @@ class ArticlesController < InheritedResources::Base
   def index
     @articles = Article.all
     @articles_by_date = @articles.group_by(&:event_date)
+    @date = params[:date] ? Date.parse(params[:date]) : Date.today
   end
   def create
     @article = Article.new article_params
-    Rails.logger.info p "*****************"
-    Rails.logger.info p @article.event_date
-    Rails.logger.info p "*****************"
     if @article.save
       redirect_to root_url
     else

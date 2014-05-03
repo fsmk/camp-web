@@ -1,6 +1,10 @@
 .container.pull-down
   #articles
-    = calendar do | date |
+    #month
+      = link_to "<", date: @date.prev_month
+      = @date.strftime("%B %Y")
+      = link_to ">", date: @date.next_month
+    = calendar @date do | date |
       -date=date.to_s
       = get_day date
       - if @articles_by_date[date]
