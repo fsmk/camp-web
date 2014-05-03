@@ -76,3 +76,6 @@ gem 'jquery-ui-rails'
 #for super admin
 gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'kaminari'
+
+#events
+gem 'fullcalendar-rails'

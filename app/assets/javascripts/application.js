@@ -20,3 +20,6 @@
 //= require ./plugins/bootstrapValidator
 //= require ./post
 //= require ./register
+//= require fullcalendar
+//= require gcal
+//= require ./events
