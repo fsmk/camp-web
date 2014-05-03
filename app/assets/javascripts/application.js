@@ -17,11 +17,10 @@
 //= require turbolinks
 //= require holder
 //= require bootstrap
-//= require ./gallery_plugins
-//= require ./articles
-//= require ./plugins/bootstrapValidator
-//= require ./post
-//= require ./register
 //= require fullcalendar
 //= require gcal
-//= require ./events
+//= require ./plugins/plugins
+//= require ./plugins/jquery.blueimp-gallery
+//= require ./plugins/bootstrap-image-gallery
+//= require ./plugins/bootstrapValidator
+//= require_tree ./application_js
