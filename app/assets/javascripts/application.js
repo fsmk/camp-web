@@ -18,6 +18,7 @@
 //= require holder
 //= require bootstrap
 //= require ./gallery_plugins
+//= require ./articles
 //= require ./plugins/bootstrapValidator
 //= require ./post
 //= require ./register

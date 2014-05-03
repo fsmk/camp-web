@@ -4,7 +4,10 @@ class ArticlesController < InheritedResources::Base
     @articles_by_date = @articles.group_by(&:event_date)
   end
   def create
-    @article = Article.create article_params
+    @article = Article.new article_params
+    Rails.logger.info p "*****************"
+    Rails.logger.info p @article.event_date
+    Rails.logger.info p "*****************"
     if @article.save
       redirect_to root_url
     else

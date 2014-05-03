@@ -1,15 +1,13 @@
 .container.pull-down
   #articles
     = calendar do | date |
-      - if @articles_by_date["2014-05-10"]
+      -date=date.to_s
+      = get_day date
+      - if @articles_by_date[date]
         %ul
-          -@articles_by_date["2014-05-10"].each do |article|
+          -@articles_by_date[date].each do |article|
             %li
               =link_to article.name, article
-      = date.day
-  %br
-
-  = link_to 'New Article', new_article_path
 
 -content_for :css do
   =stylesheet_link_tag 'articles'
