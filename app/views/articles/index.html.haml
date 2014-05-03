@@ -1,0 +1,17 @@
+.container.pull-down
+  #articles
+    #month
+      = link_to "<", date: @date.prev_month
+      = @date.strftime("%B %Y")
+      = link_to ">", date: @date.next_month
+    = calendar @date do | date |
+      -date=date.to_s
+      = get_day date
+      - if @articles_by_date[date]
+        %ul
+          -@articles_by_date[date].each do |article|
+            %li
+              =link_to article.name, article
+
+-content_for :css do
+  =stylesheet_link_tag 'articles'
