@@ -1,0 +1,11 @@
+.container.pull-down
+  %h1 New article
+
+  = render 'form'
+
+  = link_to 'Back', articles_path
+  :javascript
+    $(function(){
+      $('#article_event_date').datepicker()
+      dateFormat: 'yy-mm-dd'
+    });
