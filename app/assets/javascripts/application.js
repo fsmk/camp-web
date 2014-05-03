@@ -13,10 +13,15 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.ui.autocomplete
+//= require jquery.ui.datepicker
 //= require turbolinks
 //= require holder
 //= require bootstrap
 //= require ./gallery_plugins
+//= require ./articles
 //= require ./plugins/bootstrapValidator
 //= require ./post
 //= require ./register
+//= require fullcalendar
+//= require gcal
+//= require ./events

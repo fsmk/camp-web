@@ -5,7 +5,7 @@ class PostController < ApplicationController
   end
 
   def create_contact
-    Contact.create params[:contact]
+    Contact.create contact_params
     render :index
   end
 
@@ -17,6 +17,14 @@ class PostController < ApplicationController
     rescue => e
       @photos = []
     end
+  end
+
+  def events
+  end
+
+  private
+  def contact_params
+    params.require(:contact).permit(:name, :contact_email, :mobile, :message)
   end
 
 end

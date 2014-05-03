@@ -64,8 +64,6 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-gem 'protected_attributes'
-
 #gallery
 gem 'flickr_fu'
 
@@ -74,3 +72,10 @@ gem 'settingslogic'
 
 #jquery ui
 gem 'jquery-ui-rails'
+
+#for super admin
+gem 'activeadmin', github: 'gregbell/active_admin'
+gem 'kaminari'
+
+#events
+gem 'fullcalendar-rails'

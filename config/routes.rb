@@ -1,4 +1,8 @@
 FsmkCampWebsite::Application.routes.draw do
+  resources :articles
+
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -13,6 +17,7 @@ FsmkCampWebsite::Application.routes.draw do
   get '/technologies' => 'post#technologies'
   get '/sponsors' => 'post#sponsors'
   get '/gallery' => 'post#gallery'
+  get '/events' => 'post#events'
   
   root 'post#index'
   # Example of regular route:

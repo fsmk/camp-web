@@ -9,9 +9,12 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require jquery.ui.autocomplete
+ *= require jquery.ui.datepicker
  *= require_self
  *= require carousel
- *= require_tree .
+ *= require fullcalendar
+ *= require ./articles
+ *= require_tree ./plugins
  */
 
 @import "bootstrap";
@@ -28,9 +31,14 @@
   }
 }
 
-.field_with_errors {
-  @extend .control-group;
-  @extend .error;
+.ui-autocomplete { z-index:2147483647; }
+
+input, textarea, select {
+  border: 2px solid #bbb;
+  width: 100%;
+  margin-bottom: 15px;
 }
 
-.ui-autocomplete { z-index:2147483647; }
+.green, %label {
+  color: green;
+}

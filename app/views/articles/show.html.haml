@@ -1,0 +1,14 @@
+.container.pull-down{style:"text-align:center;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;"}
+  .jumbotron
+    %h1
+      .green
+        = @article.name
+    %p
+      = @article.body
+    %span
+      = "Added by"
+      .text-muted
+        = @article.added_by
+
+
+  = link_to 'Back', articles_path
