@@ -1,4 +1,4 @@
-$ ->
+$(document).on 'ready page:load', ->
   $(".register-form").exists ->
     registerForm = $(this)
     registerForm.bootstrapValidator()
