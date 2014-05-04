@@ -26,6 +26,9 @@ $(document).on 'ready page:load', ->
   $(".blog-slider").exists ->
     slider = $(this)
     blogs = slider.data('blogs')
+    if blogs.length is 0
+      $(this).remove()
+      return
     animater = ->
       showNewBlog = ->
         window.lastBlogIndex++
