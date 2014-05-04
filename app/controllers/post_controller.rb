@@ -1,5 +1,9 @@
 class PostController < ApplicationController
 
+  def index
+    @blogs = Blog.all
+  end
+
   def contact
     @contact = Contact.new
   end

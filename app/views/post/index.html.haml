@@ -1,4 +1,5 @@
 .container.pull-down
+  = content_tag "div", "", class: "blog-slider", data: {blogs: @blogs}
   #myCarousel.carousel.slide{"data-ride" => "carousel"}
     / Indicators
     %ol.carousel-indicators
