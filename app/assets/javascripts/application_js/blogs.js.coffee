@@ -2,7 +2,7 @@ window.lastBlogIndex = -1
 window.createBlogView = (blog) ->
   body = ""
   body += '<div class="row" id="blog-'+window.lastBlogIndex+'" style="display: none">'
-  body += ' <a href="'+blog.link+'">'
+  body += ' <a href="'+blog.link+'" target="_blank">'
   body += '   <div class="col-sm-12">'
   body += '     <h4 class="title">'
   body += '       ' + blog.title
