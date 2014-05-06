@@ -13,8 +13,8 @@
  *= require_self
  *= require carousel
  *= require fullcalendar
- *= require ./articles
  *= require_tree ./plugins
+ *= require_tree ./application_css
  */
 
 @import "bootstrap";

@@ -6,6 +6,9 @@
         = @title
       - else
         FSMK Camp
+    %meta{charset: "utf-8"}
+    %meta{content: "IE=edge", "http-equiv" => "X-UA-Compatible"}
+    %meta{content: "width=device-width, initial-scale=1", name: "viewport"}
     = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
     = javascript_include_tag "application", "data-turbolinks-track" => true
     = csrf_meta_tags
@@ -29,6 +32,7 @@
                 %li= link_to "Register for Camp", new_user_path
                 %li= link_to "Events", events_path
                 %li= link_to "Calendar", articles_path
+                %li= link_to "Gallery", gallery_path
     = yield
   %footer
     %hr

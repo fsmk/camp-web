@@ -29,4 +29,3 @@
           - @photos.each do |photo|
             %a{"data-gallery" => "", href: photo.url, title: photo.title}
               %img{alt: photo.title, src: photo.url(:thumbnail)}
-%script{type: "text/javascript", src: asset_path("gallery_plugins.js")}
