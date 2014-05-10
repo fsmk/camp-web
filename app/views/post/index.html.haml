@@ -1,106 +1,59 @@
-.container.pull-down
-  = content_tag "div", "", class: "blog-slider", data: {blogs: @blogs}
-  #myCarousel.carousel.slide{"data-ride" => "carousel"}
-    / Indicators
-    %ol.carousel-indicators
-      %li.active{"data-slide-to" => "0", "data-target" => "#myCarousel"}
-      %li{"data-slide-to" => "1", "data-target" => "#myCarousel"}
-      %li{"data-slide-to" => "2", "data-target" => "#myCarousel"}
-    .carousel-inner
-      .item.active
+.marketing
+  / Three columns of text below the carousel
+  .row
+    .col-sm-4
+      %img.img-circle{alt: "140X140", src: "images/speakers.png", style: "width:140px: height:140px;", width: "140px", height: "140px"}
+        %h2.green Speakers
+        %p Free Software developers, Industry professionals, Academic experts and many more. We get our resource persons from various companies like <b>Cisco, Intel, MindTree, Intuit, Arista Networks, Sourcebits, SAP Labs, Deeproot Linux, Mobisir</b>. Also Free Software developers from communities like <b>KDE, Firefox, Debian</b> also join us to share their experiences.
+        %p
+          %a.btn.btn-default{:href => speakers_path, :role => "button"} View details &raquo;
+    .col-sm-4
+      %img.img-circle{alt: "140X140", src: "images/technologies.png", style: "width:140px: height:140px;", width: "140px", height: "140px"}
+        %h2.green Technologies
+        %p Get your hands dirty with <b>developing mobile app using Android App Programming, developing web portal using Drupal, developing Desktop GUI applications using Qt</b> and many more technologies. Apart from this, we also have brief talks on tools like <b>Blender, Wireshark, Tor,</b> and many more.
+        %p
+          %a.btn.btn-default{:href => technologies_path, :role => "button"} View details &raquo;
+    .col-sm-4
+      %img.img-circle{alt: "140X140", src: "images/sponsorship.png", style: "width:140px: height:140px;", width: "140px", height: "140px"}
+        %h2.green Sponsors
+        %p Any individual, private or government institution interested in supporting FSMK in spreading Free software can help us by sponsoring the camp.
+        %p
+          %a.btn.btn-default{:href => sponsors_path, :role => "button"} View details &raquo;
+.row
+  %hr.featurette-divider
+    .row.featurette
+      .col-md-7
+        %h2.featurette-heading
+          First featurette heading.
+          %span.text-muted It'll blow your mind.
+        %p.lead Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
+      .col-md-5
 
-        %img{:alt => "Coming Soon", :src => "images/coming_soon.jpg"}
-          .container
-            .carousel-caption
-              %p
-                %a.btn.btn-lg.btn-primary{:href => "#", :role => "button"} We are brewing another wonderful camp for you. Subscribe now to get updates.
-
-      .item
-        %img{:alt => "Freedom Matters", :src => "images/freedom_matters.jpg"}
-          .container
-            .carousel-caption
-              %p
-                %a.btn.btn-lg.btn-primary{:href => "#", :role => "button"} Join us in spreading knowledge of freedom.
-
-      .item
-
-        %img{:alt => "Summer Camp Pic", :src => "images/summer_camp_gathering.jpg"}
-          .container
-            .carousel-caption
-              %p
-                %a.btn.btn-lg.btn-primary{:href => gallery_path, :role => "button"} Checkout the fun that we had last time. Browse the gallery.
-
-    %a.left.carousel-control{"data-slide" => "prev", :href => "#myCarousel"}
-      %span.glyphicon.glyphicon-chevron-left
-    %a.right.carousel-control{"data-slide" => "next", :href => "#myCarousel"}
-      %span.glyphicon.glyphicon-chevron-right
-  / /.carousel
-  /
-    Marketing messaging and featurettes
-    \==================================================
-  / Wrap the rest of the page in another container to center all the content.
-  .container.marketing
-    / Three columns of text below the carousel
-    .row
-      .col-lg-4
-
-        %img.img-circle{alt: "140X140", src: "images/speakers.png", style: "width:140px: height:140px;", width: "140px", height: "140px"}
-          %h2.green Speakers
-          %p Free Software developers, Industry professionals, Academic experts and many more. We get our resource persons from various companies like <b>Cisco, Intel, MindTree, Intuit, Arista Networks, Sourcebits, SAP Labs, Deeproot Linux, Mobisir</b>. Also Free Software developers from communities like <b>KDE, Firefox, Debian</b> also join us to share their experiences.
-          %p
-            %a.btn.btn-default{:href => speakers_path, :role => "button"} View details &raquo;
-      / /.col-lg-4
-      .col-lg-4
-        %img.img-circle{alt: "140X140", src: "images/technologies.png", style: "width:140px: height:140px;", width: "140px", height: "140px"}
-          %h2.green Technologies
-          %p Get your hands dirty with <b>developing mobile app using Android App Programming, developing web portal using Drupal, developing Desktop GUI applications using Qt</b> and many more technologies. Apart from this, we also have brief talks on tools like <b>Blender, Wireshark, Tor,</b> and many more.
-          %p
-            %a.btn.btn-default{:href => technologies_path, :role => "button"} View details &raquo;
-      / /.col-lg-4
-      .col-lg-4
-
-        %img.img-circle{alt: "140X140", src: "images/sponsorship.png", style: "width:140px: height:140px;", width: "140px", height: "140px"}
-          %h2.green Sponsors
-          %p Any individual, private or government institution interested in supporting FSMK in spreading Free software can help us by sponsoring the camp.
-          %p
-            %a.btn.btn-default{:href => sponsors_path, :role => "button"} View details &raquo;
-      / /.col-lg-4
-    / /.row
-    / START THE FEATURETTES
+        %img.featurette-image.img-responsive{:alt => "Generic placeholder image", "data-src" => "holder.js/500x500/auto"}
     %hr.featurette-divider
       .row.featurette
-        .col-md-7
-          %h2.featurette-heading
-            First featurette heading.
-            %span.text-muted It'll blow your mind.
-          %p.lead Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
         .col-md-5
 
           %img.featurette-image.img-responsive{:alt => "Generic placeholder image", "data-src" => "holder.js/500x500/auto"}
+        .col-md-7
+          %h2.featurette-heading
+            Oh yeah, it's that good.
+            %span.text-muted See for yourself.
+          %p.lead Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
       %hr.featurette-divider
         .row.featurette
+          .col-md-7
+            %h2.featurette-heading
+              And lastly, this one.
+              %span.text-muted Checkmate.
+            %p.lead Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
           .col-md-5
 
             %img.featurette-image.img-responsive{:alt => "Generic placeholder image", "data-src" => "holder.js/500x500/auto"}
-          .col-md-7
-            %h2.featurette-heading
-              Oh yeah, it's that good.
-              %span.text-muted See for yourself.
-            %p.lead Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
         %hr.featurette-divider
-          .row.featurette
-            .col-md-7
-              %h2.featurette-heading
-                And lastly, this one.
-                %span.text-muted Checkmate.
-              %p.lead Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
-            .col-md-5
-
-              %img.featurette-image.img-responsive{:alt => "Generic placeholder image", "data-src" => "holder.js/500x500/auto"}
-          %hr.featurette-divider
-            %footer
-              %p.pull-right
-                %a{:href => "/"} Back to top
+          %footer
+            %p.pull-right
+              %a{:href => "/"} Back to top
 
   - content_for :javascript do
     = javascript_include_tag 'holder'
