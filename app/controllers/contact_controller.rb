@@ -10,6 +10,7 @@ class ContactController < ApplicationController
   def create
     @contact = Contact.new contact_params
     if @contact.save
+      flash[:success] = "We'll get back to you as soon as we can."
       redirect_to root_url
     else
       render 'new'

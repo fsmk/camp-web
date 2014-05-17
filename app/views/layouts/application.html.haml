@@ -44,6 +44,10 @@
         %hr.featurette-divider
         = content_tag "div", "", class: "blog-slider", data: {blogs: @blogs}
       .col-sm-9
+        - flash.each do |key, value|
+          %div{:class => "alert alert-#{key}", :style => "margin-top:10px"}
+            %button.close{"data-dismiss" => "alert", :type => "button"} &times;
+            = value
         = yield
   %footer
     %hr
