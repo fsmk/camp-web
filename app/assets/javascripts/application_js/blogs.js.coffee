@@ -1,28 +1,29 @@
-window.lastBlogIndex = -1
 window.createBlogView = (blog) ->
   body = ""
   body += '<div class="row" id="blog-'+window.lastBlogIndex+'" style="display: none">'
-  body += ' <a href="'+blog.link+'" target="_blank">'
-  body += '   <div class="col-sm-12">'
-  body += '     <h4 class="title">'
-  body += '       ' + blog.title
-  body += '     </h4>'
-  body += '   </div>'
-  body += '   <div class="col-sm-12">'
-  body += '     <span class="body">'
-  body += '       ' + blog.body.substring(0,260)+"..."
-  body += '     </span>'
-  body += '   </div>'
-  body += '   <div class="col-sm-12">'
-  body += '     <small class="pull-right author">'
-  body += '       - ' + blog.author
-  body += '     </small>'
-  body += '   </div>'
-  body += '  </a>'
+  body += '  <div class="col-sm-12">'
+  body += '    <h4 class="title">'
+  body += '      ' + blog.title
+  body += '    </h4>'
+  body += '  </div>'
+  body += '  <div class="col-sm-12">'
+  body += '    <span class="body">'
+  body += '      ' + blog.body.substring(0,260)+"..."
+  body += '    </span>'
+  body += '    <a href="'+blog.link+'" target="_blank">See more</a>'
+  body += '  </div>'
+  body += '  <div class="col-sm-12">'
+  body += '    <small class="pull-right author">'
+  body += '      - ' + blog.author
+  body += '    </small>'
+  body += '  </div>'
   body += '</div>'
   $(body)
 
 $(document).on 'ready page:load', ->
+  window.lastBlogIndex = -1
+  if window.blogSlider isnt null
+    clearInterval window.blogSlider
   $(".blog-slider").exists ->
     slider = $(this)
     blogs = slider.data('blogs')
@@ -47,4 +48,4 @@ $(document).on 'ready page:load', ->
       else
         showNewBlog()
     animater()
-    setInterval animater, 5000
+    window.blogSlider = setInterval animater, 5000

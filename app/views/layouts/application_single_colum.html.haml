@@ -29,16 +29,12 @@
               %ul.nav.navbar-nav
                 %li= link_to "About", about_path
                 %li= link_to "Contact Us", new_contact_path
-                %li= link_to "FAQs", faq_path
                 %li= link_to "Register for Camp", new_user_path
                 %li= link_to "Events", events_path
                 %li= link_to "Calendar", articles_path
                 %li= link_to "Gallery", gallery_path
     .container.pull-down
-      .col-sm-3
-        = content_tag "div", "", class: "blog-slider", data: {blogs: @blogs}
-      .col-sm-9
-        = yield
+      = yield
   %footer
     %hr
     %center
