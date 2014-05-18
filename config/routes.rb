@@ -19,7 +19,7 @@ FsmkCampWebsite::Application.routes.draw do
   get '/sponsors' => 'post#sponsors'
   get '/gallery' => 'post#gallery'
   get '/events' => 'post#events'
-  
+  get '/venue' => 'post#venue'
   root 'post#index'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
