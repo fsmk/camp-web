@@ -4,16 +4,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.4'
 
 # Use sqlite3 as the database for Active Record
-group :development, :test do
-  gem 'sqlite3'
-  gem "better_errors"
-  gem 'binding_of_caller'
-end
-
-group :production do
-  gem 'pg'
-  gem 'rails_12factor'
-end
+gem 'sqlite3'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.2'
@@ -82,3 +73,10 @@ gem 'fullcalendar-rails'
 
 #For openlayers, used for openstreetmaps
 gem 'openlayers-rails'
+
+#for production deploy
+gem 'capistrano'
+gem 'capistrano-rails'
+gem 'capistrano-bundler'
+gem 'capistrano-rvm', github: "capistrano/rvm"
+gem 'unicorn'
