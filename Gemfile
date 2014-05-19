@@ -79,3 +79,6 @@ gem 'kaminari'
 
 #events
 gem 'fullcalendar-rails'
+
+#For openlayers, used for openstreetmaps
+gem 'openlayers-rails'

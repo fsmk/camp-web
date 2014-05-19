@@ -1,4 +1,19 @@
 .marketing
+  .row
+    .col-md-7
+      %h2
+        Venue Update:
+        %span.text-muted Dayanand Sagar College of Engineering
+      %p.lead 
+        FSMK is glad to announce that Information Science Department of Dayanand Sagar College of Engineering has agreed to be the co-organizer and host the summer camp in their Kumaraswamy Layout Campus. Please check
+        %a{:href => venue_path} the venue page
+        for more information.
+    .col-md-5
+
+      %img.featurette-image.img-responsive
+        = image_tag "DayanandSagarCollegeOfEngineering_Logo.png", width: "100%", style: "border-width:1", alt: "Dayanand Sagar College Of Engineering"
+  %hr.featurette-divider
+
   / Three columns of text below the carousel
   .row
     .col-sm-4
@@ -19,41 +34,11 @@
         %p.lead Any individual, private or government institution interested in supporting FSMK in spreading Free software can help us by sponsoring the camp.
         %p
           %a.btn.btn-default{:href => sponsors_path, :role => "button"} View details &raquo;
-.row
-  %hr.featurette-divider
-    .row.featurette
-      .col-md-7
-        %h2.featurette-heading
-          First featurette heading.
-          %span.text-muted It'll blow your mind.
-        %p.lead Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
-      .col-md-5
-
-        %img.featurette-image.img-responsive{:alt => "Generic placeholder image", "data-src" => "holder.js/500x500/auto"}
+  
     %hr.featurette-divider
-      .row.featurette
-        .col-md-5
+      %footer
+        %p.pull-right
+          %a{:href => "/"} Back to top
 
-          %img.featurette-image.img-responsive{:alt => "Generic placeholder image", "data-src" => "holder.js/500x500/auto"}
-        .col-md-7
-          %h2.featurette-heading
-            Oh yeah, it's that good.
-            %span.text-muted See for yourself.
-          %p.lead Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
-      %hr.featurette-divider
-        .row.featurette
-          .col-md-7
-            %h2.featurette-heading
-              And lastly, this one.
-              %span.text-muted Checkmate.
-            %p.lead Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
-          .col-md-5
-
-            %img.featurette-image.img-responsive{:alt => "Generic placeholder image", "data-src" => "holder.js/500x500/auto"}
-        %hr.featurette-divider
-          %footer
-            %p.pull-right
-              %a{:href => "/"} Back to top
-
-  - content_for :javascript do
-    = javascript_include_tag 'holder'
+    - content_for :javascript do
+      = javascript_include_tag 'holder'
