@@ -80,7 +80,6 @@ GEM
       xml-magic
     formtastic (2.3.0.rc3)
       actionpack (>= 3.0)
-    fullcalendar-rails (1.6.4.0)
     haml (4.0.5)
       tilt
     haml-rails (0.5.3)
@@ -199,7 +198,6 @@ DEPENDENCIES
   bootstrap-sass
   coffee-rails (~> 4.0.0)
   flickr_fu
-  fullcalendar-rails
   haml
   haml-rails
   jbuilder (~> 1.2)
