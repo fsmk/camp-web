@@ -1,23 +1,27 @@
-%button.btn.btn-primary.btn-lg{"data-target" => "#register-modal", "data-toggle" => "modal"}
-  Register Now
-#register-modal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
-  .modal-dialog
-    .modal-content
-      .modal-header
-        %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} &times;
-        %h4#myModalLabel.modal-title Register for summer camp 2014
-      .modal-body
-        = render partial: 'form'
-      .modal-footer
-        %button.btn.btn-default{"data-dismiss" => "modal", type: "button"} Close
-        %button.btn.btn-primary#register-button Register
-.col-sm-6
-  %p
-    Please do read the
-    %a{href: "/faq", title: "Frequently Asked Questions"} Frequently Asked Questions
-    before registering. Once you register, you should recieve an email confirming your registration. Registration fees for the event is Rs. 4000. Based on the registration id and date, we will let you know if you are eligible for early bird registration discount of 10%. After registration, someone from FSMK will contact you regarding the collection of fees. Please note that delay in giving registration fees, may lead to cancellation of early bird registration discount. Feel free to
-    %a{href: "/contact/new", title: "Contact Us"} contact us
-    in case you have doubts.
+%h3.green Register now
+.row
+  .col-sm-6
+    %p.lead
+      Please do read the
+      %a{href: "/faq", title: "Frequently Asked Questions"} Frequently Asked Questions
+      before registering. Once you register, you should recieve an email confirming your registration. Registration fees for the event is Rs. 4000. Based on the registration id and date, we will let you know if you are eligible for early bird registration discount of 10%. After registration, someone from FSMK will contact you regarding the collection of fees. Please note that delay in giving registration fees, may lead to cancellation of early bird registration discount. Feel free to
+      %a{href: "/contact/new", title: "Contact Us"} contact us
+      in case you have doubts.
+  .col-sm-6
+    %button.btn.btn-primary.btn-lg{"data-target" => "#register-modal", "data-toggle" => "modal"}
+      Register Now
+    #register-modal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
+      .modal-dialog
+        .modal-content
+          .modal-header
+            %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} &times;
+            %h4#myModalLabel.modal-title Register for summer camp 2014
+          .modal-body
+            = render partial: 'form'
+          .modal-footer
+            %button.btn.btn-default{"data-dismiss" => "modal", type: "button"} Close
+            %button.btn.btn-primary#register-button Register
+    =render :partial => 'shared/remaining_day_for_camp'
 - if @user.errors.any?
   :javascript
     $(document).on('ready page:load', function(){

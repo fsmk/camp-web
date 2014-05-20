@@ -68,8 +68,5 @@ gem 'jquery-ui-rails'
 gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'kaminari'
 
-#events
-gem 'fullcalendar-rails'
-
 #For openlayers, used for openstreetmaps
 gem 'openlayers-rails'

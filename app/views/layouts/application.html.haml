@@ -1,60 +1,24 @@
 !!!
 %html
   %head
-    %title
-      - if @title.present?
-        = @title
-      - else
-        FSMK Camp
-    %meta{charset: "utf-8"}
-    %meta{content: "IE=edge", "http-equiv" => "X-UA-Compatible"}
-    %meta{content: "width=device-width, initial-scale=1", name: "viewport"}
-    = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
-    = javascript_include_tag "application", "data-turbolinks-track" => true
-    = csrf_meta_tags
-    %script{type: "text/javascript"}
-      var assetPath = "\
-      = asset_path("nav_thumbs.png") + " \\"
-      ";
-      assetPath = assetPath.trim();
-      assetPath = assetPath.substring(0, assetPath.lastIndexOf("/") + 1);
+    =render :partial => 'layouts/layout_header'
   %body
-    .navbar-wrapper
-      .container
-        .navbar.navbar-inverse.navbar-static-top{role: "navigation"}
-          .container
-            .navbar-header
-              %a.navbar-brand{href: "/"} FSMK Camp
-            .navbar-collapse.collapse
-              %ul.nav.navbar-nav
-                %li= link_to "About", about_path
-                %li= link_to "Contact Us", new_contact_path
-                %li= link_to "FAQs", faq_path
-                %li= link_to "Register for Camp", new_user_path
-                %li= link_to "Events", events_path
-                %li= link_to "Calendar", articles_path
-                %li= link_to "Gallery", gallery_path
-                %li= link_to "Venue", venue_path
-    .container.pull-down
+    =render :partial => 'layouts/layout_nav_bar'
+    .container.pull-down.with-padding
       .col-sm-3
-        %h5
+        %p.lead
           Free Software Movement Karnataka
         %a{href: "http://fsmk.org", rel: "FSMK's Site", target: "_blank"}
           = image_tag "FSMK_Logo.png", width: "100%", style: "border-width:1", alt: "FSMK's site"
           
         %hr.featurette-divider
         = content_tag "div", "", class: "blog-slider", data: {blogs: @blogs}
+        %hr.featurette-divider
+        =render :partial => 'shared/remaining_day_for_camp'
       .col-sm-9
         - flash.each do |key, value|
           %div{:class => "alert alert-#{key}", :style => "margin-top:10px"}
             %button.close{"data-dismiss" => "alert", :type => "button"} &times;
             = value
         = yield
-  %footer
-    %hr
-    %center
-      %a{href: "http://creativecommons.org/licenses/by/3.0/deed.en_US", rel: "license"}
-        %img{alt: "Creative Commons License", src: "http://i.creativecommons.org/l/by/3.0/88x31.png", style: "border-width:0;"}
-      %br
-      This work is licensed under a
-      %a{href: "http://creativecommons.org/licenses/by/3.0/deed.en_US", rel: "license"} Creative Commons Attribution 3.0 Unported License
+    =render :partial => 'layouts/layout_footer'

@@ -16,10 +16,7 @@
 //= require jquery.ui.datepicker
 //= require jquery.ui.effect-slide
 //= require turbolinks
-//= require holder
 //= require bootstrap
-//= require fullcalendar
-//= require gcal
 //= require ./plugins/plugins
 //= require ./plugins/jquery.blueimp-gallery
 //= require ./plugins/bootstrap-image-gallery
