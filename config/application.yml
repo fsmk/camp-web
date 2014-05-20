@@ -1,6 +1,6 @@
 defaults: &defaults
   flickr:
-    user_id: "12864272@N02"
+    user_id: "124841002@N04"
 
 development:
   <<: *defaults
