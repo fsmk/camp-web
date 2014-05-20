@@ -10,11 +10,11 @@
         %a.navbar-brand{href: "/"} FSMK Camp
       #camp-nav-collaps.collapse.navbar-collapse
         %ul.nav.navbar-nav
+          %li{id: "post-about"}= link_to "About", about_path
           %li{id: "users-new"}= link_to "Register for Camp", new_user_path
           %li{id: "articles-index"}= link_to "Events", articles_path
           %li{id: "post-venue"}= link_to "Venue", venue_path
           %li{id: "post-gallery", "data-no-turbolink" => "true"}= link_to "Gallery", gallery_path
-          %li{id: "post-about"}= link_to "About", about_path
           %li{id: "post-faq"}= link_to "FAQs", faq_path
           %li{id: "contact-new"}= link_to "Contact Us", new_contact_path
 %script{type: "text/javascript"}
