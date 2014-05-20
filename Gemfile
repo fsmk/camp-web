@@ -73,10 +73,3 @@ gem 'fullcalendar-rails'
 
 #For openlayers, used for openstreetmaps
 gem 'openlayers-rails'
-
-#for production deploy
-gem 'capistrano'
-gem 'capistrano-rails'
-gem 'capistrano-bundler'
-gem 'capistrano-rvm', github: "capistrano/rvm"
-gem 'unicorn'
