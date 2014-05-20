@@ -21,6 +21,7 @@
           .modal-footer
             %button.btn.btn-default{"data-dismiss" => "modal", type: "button"} Close
             %button.btn.btn-primary#register-button Register
+    =render :partial => 'shared/remaining_day_for_camp'
 - if @user.errors.any?
   :javascript
     $(document).on('ready page:load', function(){

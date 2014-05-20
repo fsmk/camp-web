@@ -1,0 +1,15 @@
+- days = (Settings.camp_start_on.to_i - DateTime.new(DateTime.now.year, DateTime.now.month, DateTime.now.day, 0, 0, 0, 0).strftime('%Q').to_i) * 1.1574e-8
+.row.ramining-days
+  .col-xs-12
+    .counter-container.text-center
+      - if days > 1
+        %span.count
+          = days.to_i
+        %span.days days
+        .message Remaining for camp
+      - elsif days > 0
+        .message Camp will start tomorrow
+      - elsif days > -9
+        .message Camp started
+      -else
+        .message Camp over

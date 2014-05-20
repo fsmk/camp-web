@@ -13,6 +13,8 @@
           
         %hr.featurette-divider
         = content_tag "div", "", class: "blog-slider", data: {blogs: @blogs}
+        %hr.featurette-divider
+        =render :partial => 'shared/remaining_day_for_camp'
       .col-sm-9
         - flash.each do |key, value|
           %div{:class => "alert alert-#{key}", :style => "margin-top:10px"}
