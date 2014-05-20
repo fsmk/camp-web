@@ -23,7 +23,7 @@ $(document).on 'ready page:load', ->
   map.addLayer markers
   size = new OpenLayers.Size(21, 25)
   offset = new OpenLayers.Pixel(-(size.w / 2), -size.h)
-  icon = new OpenLayers.Icon("marker.png", size, offset)
+  icon = new OpenLayers.Icon(assetPath+"marker.png", size, offset)
   markers.addMarker new OpenLayers.Marker(position, icon)
   
   # Fix map size on dom ready
