@@ -22,9 +22,6 @@ class PostController < ApplicationController
     end
   end
 
-  def events
-  end
-
   private
   def contact_params
     params.require(:contact).permit(:name, :contact_email, :mobile, :message)
