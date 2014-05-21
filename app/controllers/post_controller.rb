@@ -3,15 +3,6 @@ class PostController < ApplicationController
   def index
   end
 
-  def contact
-    @contact = Contact.new
-  end
-
-  def create_contact
-    Contact.create contact_params
-    render :index
-  end
-
   def gallery
     @title = "Gallery"
     begin
@@ -22,9 +13,8 @@ class PostController < ApplicationController
     end
   end
 
-  private
-  def contact_params
-    params.require(:contact).permit(:name, :contact_email, :mobile, :message)
+  def sitemap
+    @articles = Article.all
   end
 
 end
