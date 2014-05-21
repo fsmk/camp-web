@@ -12,7 +12,9 @@
           = image_tag "FSMK_Logo.png", width: "100%", style: "border-width:1", alt: "FSMK's site"
           
         %hr.featurette-divider
-        = content_tag "div", "", class: "blog-slider", data: {blogs: @blogs}
+        .blog-slider
+          %h5 Camp memories 2013
+          = content_tag "div", "",id: "blog-slider", data: {blogs: @blogs}
         %hr.featurette-divider
         =render :partial => 'shared/remaining_day_for_camp'
       .col-sm-9

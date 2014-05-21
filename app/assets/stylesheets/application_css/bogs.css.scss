@@ -6,6 +6,8 @@
   border-style: solid;
   border-color: #CFCBCF;
   border-width: 1px;
+  padding-top: 5px;
+  height: 315px;
   .title {
     color: green;
   }
@@ -18,5 +20,9 @@
     font-style: italic;
     text-transform: uppercase;
     color: #5a5a5a;
+  }
+  h5 {
+    font-variant: small-caps;
+    color: #ababab;
   }
 }
