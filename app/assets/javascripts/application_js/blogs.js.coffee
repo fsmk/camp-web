@@ -24,8 +24,8 @@ $(document).on 'ready page:load', ->
   window.lastBlogIndex = -1
   if window.blogSlider isnt null
     clearInterval window.blogSlider
-  $("#blog-slider").exists ->
-    slider = $(this)
+  $(".blog-slider").exists ->
+    slider = $("#blog-slider")
     blogs = slider.data('blogs')
     if blogs.length is 0
       $(this).remove()
