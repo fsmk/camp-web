@@ -8,7 +8,7 @@ window.createBlogView = (blog) ->
   body += '  </div>'
   body += '  <div class="col-sm-12">'
   body += '    <span class="body">'
-  body += '      ' + blog.body.substring(0,260)+"..."
+  body += '      ' + blog.body.substring(0,200)+"..."
   body += '    </span>'
   body += '    <a href="'+blog.link+'" target="_blank">See more</a>'
   body += '  </div>'
@@ -24,7 +24,7 @@ $(document).on 'ready page:load', ->
   window.lastBlogIndex = -1
   if window.blogSlider isnt null
     clearInterval window.blogSlider
-  $(".blog-slider").exists ->
+  $("#blog-slider").exists ->
     slider = $(this)
     blogs = slider.data('blogs')
     if blogs.length is 0
