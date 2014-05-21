@@ -21,6 +21,11 @@
           .modal-footer
             %button.btn.btn-default{"data-dismiss" => "modal", type: "button"} Close
             %button.btn.btn-primary#register-button Register
+    .row
+      .col-xs-12
+        %br
+        .jumbotron.text-center
+          %h4.date 2014 July 19 to 27
     =render :partial => 'shared/remaining_day_for_camp'
 - if @user.errors.any?
   :javascript

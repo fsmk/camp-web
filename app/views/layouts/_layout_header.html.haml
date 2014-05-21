@@ -6,6 +6,15 @@
 %meta{charset: "utf-8"}
 %meta{content: "IE=edge", "http-equiv" => "X-UA-Compatible"}
 %meta{content: "width=device-width, initial-scale=1", name: "viewport"}
+%title FSMK Summer Camp 2014
+%meta{content: "Free Software Movement Karnataka (FSMK) is planning a 9 days Industry Orientation workshop during the summer break , July 19 - 27.", name: "description"}
+%meta{content: "fsmk, FSMK, camp, summer, 2014,  Free, Software, Movement, Karnataka, ", name: "keywords"}
+%meta{content: "index,follow", name: "robot"}
+%meta{content: "This work is licensed under a Creative Commons Attribution 3.0 Unported License", name: "copyright"}
+%meta{content: "FSMK", name: "author"}
+%meta{content: "www.onlinemetatag.com", name: "generator"}
+%meta{content: "1", name: "revisit-after"}
+%link{href: image_path("fav_icon.png"), rel: "icon", type: "image/png"}
 = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
 = javascript_include_tag "application", "data-turbolinks-track" => true
 = csrf_meta_tags
@@ -15,3 +24,11 @@
   ";
   assetPath = assetPath.trim();
   assetPath = assetPath.substring(0, assetPath.lastIndexOf("/") + 1);
+- if Rails.env.production?
+  :javascript
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-51201835-1', 'fsmk.org');
