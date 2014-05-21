@@ -1,5 +1,4 @@
 FsmkCampWebsite::Application.routes.draw do
-  resources :articles
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
@@ -10,6 +9,7 @@ FsmkCampWebsite::Application.routes.draw do
   resources :post, only:[:index]
   resources :contact, only:[:new, :create]
   resources :users, only:[:index, :new, :create]
+  resources :articles, only:[:index]
   
   get '/register' => 'users#new'
   get '/about' => 'post#about'
