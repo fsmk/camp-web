@@ -14,13 +14,16 @@
 %meta{content: "FSMK", name: "author"}
 %meta{content: "www.onlinemetatag.com", name: "generator"}
 %meta{content: "1", name: "revisit-after"}
+%meta{content: "http://camp.fsmk.org#{asset_path("FSMKcamps.png")}", property: "og:image"}
+%meta{content: "FSMK Summer Camp 2014", property: "og:title"}
+%meta{content: "Free Software Movement Karnataka (FSMK) is planning a 9 days Industry Orientation workshop during the summer break , July 19 - 27.", property: "og:description"}
 %link{href: image_path("fav_icon.png"), rel: "icon", type: "image/png"}
 = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
 = javascript_include_tag "application", "data-turbolinks-track" => true
 = csrf_meta_tags
 %script{type: "text/javascript"}
   var assetPath = "\
-  = asset_path("nav_thumbs.png") + " \\"
+  = asset_path("fav_icon.png") + " \\"
   ";
   assetPath = assetPath.trim();
   assetPath = assetPath.substring(0, assetPath.lastIndexOf("/") + 1);
