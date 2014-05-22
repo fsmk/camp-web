@@ -2,6 +2,7 @@ defaults: &defaults
   flickr:
     user_id: "124841002@N04"
   camp_start_on : "1405728000000"
+  camp_start_date : "2014-07-19"
 
 development:
   <<: *defaults
