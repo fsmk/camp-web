@@ -17,6 +17,9 @@
           %li{id: "post-gallery", "data-no-turbolink" => "true"}= link_to "Gallery", gallery_path
           %li{id: "post-faq"}= link_to "FAQs", faq_path
           %li{id: "contact-new"}= link_to "Contact Us", "/contact_us"
+      .github-ribbon
+        %a{href: "https://github.com/fsmk/camp-web", target: "_blank"}
+          = image_tag "fork_me.png", width: "100%", style: "border-width:1", alt: "Github fork", title: "Like this site, checkout the source code on our github repo."
 %script{type: "text/javascript"}
   var navId = "\
   = "#{controller_name}-#{action_name} \\"
