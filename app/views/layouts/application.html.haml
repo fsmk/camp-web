@@ -5,6 +5,17 @@
   %body
     =render :partial => 'layouts/layout_google_analytics'
     =render :partial => 'layouts/layout_nav_bar'
+    .sticky-container
+      %ul.sticky
+        %li
+          %a{href:"https://www.facebook.com/fsmksummercamp14", target:"_blank"}
+            = image_tag "social/icon-facebook.png", height: "32", width: "32", alt: "Facebook"
+            %p Facebook
+        %li
+          %a{href:"https://twitter.com/FSMKSC14", target:"_blank"}
+            = image_tag "social/icon-twitter.png", height: "32", width: "32", alt: "Twitter"
+            %p Twitter
+
     .container.pull-down.with-padding
       .col-sm-3
         %p.lead
