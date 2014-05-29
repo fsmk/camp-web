@@ -59,7 +59,7 @@
         %br
         - vq.options.split(",").each do |o|
           %label.checkbox-inline
-            -if params["#{key}"].include? o
+            -if params[key].present? && params[key].include?(o)
               %input{type: "checkbox", name: "#{key}[]", value: o, checked: ""}=o
             -else
               %input{type: "checkbox", name: "#{key}[]", value: o}=o
