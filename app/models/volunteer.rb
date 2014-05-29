@@ -4,5 +4,5 @@ class Volunteer < ActiveRecord::Base
   VALID_EMAIL_REGEXP = /\A^([\w\.%\+\'\-]+)@([\w\-]+\.)+([\w]{2,})$\Z/i
   validates_format_of  :email, with: VALID_EMAIL_REGEXP, allow_blank: false
 
-  has_many :volunteer_qas
+  has_many :volunteer_qas, dependent: :destroy
 end
