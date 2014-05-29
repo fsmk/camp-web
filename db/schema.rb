@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140529171654) do
+ActiveRecord::Schema.define(version: 20140529205626) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -146,7 +146,7 @@ ActiveRecord::Schema.define(version: 20140529171654) do
 
   create_table "volunteers", force: true do |t|
     t.string   "name"
-    t.string   "email",                          null: false
+    t.string   "email",                                   null: false
     t.string   "gender"
     t.integer  "sem"
     t.string   "college"
@@ -158,6 +158,7 @@ ActiveRecord::Schema.define(version: 20140529171654) do
     t.string   "t_shirt_size"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "status",         default: "not_verified", null: false
   end
 
   add_index "volunteers", ["email"], name: "index_volunteers_on_email", unique: true
