@@ -1,0 +1,4 @@
+- flash.each do |key, value|
+  %div{:class => "#{flash_class(key)}", :style => "margin-top:10px"}
+    %button.close{"data-dismiss" => "alert", :type => "button"} &times;
+    = value

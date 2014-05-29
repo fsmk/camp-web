@@ -1,0 +1,66 @@
+= render partial: 'shared/error_messages', locals: { object: @volunteer }
+= form_for @volunteer, :html => {role: "form"}  do |f|
+  .form-group
+    =f.label :name
+    =f.text_field :name, :class => 'form-control', placeholder: "Name", size: "30", maxlength: "100", "data-bv-notempty" => "", "data-bv-notempty-message" => "Name is required"
+  .form-group
+    =f.label :email
+    =f.text_field :email, :class => 'form-control', placeholder: "Email", size: "30", maxlength: "100", "data-bv-notempty" => "", "data-bv-notempty-message" => "Email is required", "data-bv-emailaddress" => "true", "data-bv-emailaddress-message" => "Not a valid email"
+  .form-group
+    =f.label :gender
+    %select.form-control{name: "volunteer[gender]"}
+      -["Male", "Female", "Third gender"].each do | g |
+        %option
+          = g
+  .form-group
+    =f.label :sem, "Semester"
+    =f.number_field :sem, :class => 'form-control', placeholder: "Semester", size: "30", maxlength: "2", min: "1", max: "11", "data-bv-notempty" => "", "data-bv-notempty-message" => "Semester is required"
+  .form-group
+    =f.label :college
+    =f.text_field :college, :class => 'form-control', placeholder: "College", size: "30", maxlength: "100", "data-bv-notempty" => "", "data-bv-notempty-message" => "College is required"
+  .form-group
+    =f.label :branch
+    =f.text_field :branch, :class => 'form-control', placeholder: "Branch", size: "30", maxlength: "20", "data-bv-notempty" => "", "data-bv-notempty-message" => "Branch is required"
+  .form-group
+    =f.label :phone
+    =f.text_field :phone, :class => 'form-control', placeholder: "Phone", size: "30", maxlength: "13", "data-bv-notempty" => "", "data-bv-notempty-message" => "Phone is required"
+  .form-group
+    =f.label :previous_camp
+    %select.form-control{name: "volunteer[previous_camp]"}
+      -["Didn't attend", "As volunteer", "As participant"].each do | s |
+        %option
+          = s
+  .form-group
+    =f.label :t_shirt_size
+    %select.form-control{name: "volunteer[t_shirt_size]"}
+      -["S", "M", "L", "Xl", "XXl"].each do | s |
+        %option
+          = s
+  .checkbox
+    .row
+      .col-sm-1.col-sm-offset-1
+        = f.check_box :getting_laptop, checked: "checked"
+      .col-sm-9
+        %b I'll bring laptop
+  .checkbox
+    .row
+      .col-sm-1.col-sm-offset-1
+        = f.check_box :ready_to_pay
+      .col-sm-9
+        %b Ready to volunteer, even if I have to pay some nominal amount to cover the Food charges?
+  %hr
+  - @volunteer_questions.each do |vq|
+    .form-group
+      - key = "vq#{vq.id}"
+      %label{:for => "#{key}#{(vq.qtype.eql? "text") ? "" : "[]"}"}=vq.question
+      -if vq.qtype.eql? "text"
+        %textarea.form-control{name: "#{key}"}="#{params[key]}"
+      -else
+        %br
+        - vq.options.split(",").each do |o|
+          %label.checkbox-inline
+            -if params[key].present? && params[key].include?(o)
+              %input{type: "checkbox", name: "#{key}[]", value: o, checked: ""}=o
+            -else
+              %input{type: "checkbox", name: "#{key}[]", value: o}=o
+  %button.btn.btn-primary{type: "submit", value: "Save"} Register
