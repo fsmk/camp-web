@@ -48,4 +48,19 @@
         = f.check_box :ready_to_pay
       .col-sm-9
         %b Ready to volunteer, even if I have to pay some nominal amount to cover the Food charges?
+  %hr
+  - @volunteer_questions.each do |vq|
+    .form-group
+      - key = "vq#{vq.id}"
+      %label{:for => "#{key}#{(vq.qtype.eql? "text") ? "" : "[]"}"}=vq.question
+      -if vq.qtype.eql? "text"
+        %textarea.form-control{name: "#{key}"}="#{params[key]}"
+      -else
+        %br
+        - vq.options.split(",").each do |o|
+          %label.checkbox-inline
+            -if params["#{key}"].include? o
+              %input{type: "checkbox", name: "#{key}[]", value: o, checked: ""}=o
+            -else
+              %input{type: "checkbox", name: "#{key}[]", value: o}=o
   %button.btn.btn-primary{type: "submit", value: "Save"} Register
