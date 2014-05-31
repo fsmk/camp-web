@@ -54,7 +54,15 @@
       - key = "vq#{vq.id}"
       %label{:for => "#{key}#{(vq.qtype.eql? "text") ? "" : "[]"}"}=vq.question
       -if vq.qtype.eql? "text"
-        %textarea.form-control{name: "#{key}"}="#{params[key]}"
+        - limit = -1
+        - if vq.options.present?
+          - limit = vq.options.to_i
+        -if limit == -1
+          %textarea.form-control{name: "#{key}"}="#{params[key]}"
+        -elsif limit > 0
+          %textarea.form-control{name: "#{key}", "data-bv-notempty" => "", "data-bv-notempty-message" => "This feild is required", "data-bv-stringlength" => "", "data-bv-stringlength-min" => limit, "data-bv-stringlength-message" => "Minimum #{limit} characters"}="#{params[key]}"
+        -else
+          %textarea.form-control{name: "#{key}", "data-bv-notempty" => "", "data-bv-notempty-message" => "This feild is required"}="#{params[key]}"
       -else
         %br
         - vq.options.split(",").each do |o|
