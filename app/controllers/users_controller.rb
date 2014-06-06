@@ -9,10 +9,10 @@ class UsersController < ApplicationController
    @user = User.new(user_params)
    if @user.save
     if @user.is_approvable
-      flash[:success] = "Thank you for registrations. Your id number is #{@user.id}. A mail regarding the payment of registration fees has been sent to you. Please follow the instructions given in the same."
+      flash[:success] = "Thank you for registrations. Your id number is #{@user.id}. A mail regarding the payment of registration fees will be sent to you soon. Please follow the instructions given in the same."
     else
       @user.status = "waiting_list"
-      flash[:info] = "Dear student,\nsince many registrations has got from VCET puttur. we are keeping your registration in waiting list kindly contact Rakesh: (+91) 7204044233 or Sijil: (+91) 8892324346 for more details."
+      flash[:notice] = "Dear student,\nyour registration in under waiting list as we have reached max seat limit. Kindly contact Rakesh(+91-7204044233) or Shijil(+91-8892324346)"
       @user.save
     end
     redirect_to root_url
