@@ -17,6 +17,7 @@ FsmkCampWebsite::Application.routes.draw do
   get '/about' => 'post#about'
   get '/contact_us' => 'contact#new'
   get '/faq' => 'post#faq'
+  get '/schedule' => 'post#schedule'
   get '/speakers' => 'post#speakers'
   get '/technologies' => 'post#technologies'
   get '/sponsors' => 'post#sponsors'
