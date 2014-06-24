@@ -10,7 +10,7 @@ FsmkCampWebsite::Application.routes.draw do
   resources :contact, only:[:new, :create]
   resources :users, only:[:index, :new, :create]
   resources :articles, only:[:index, :show]
-  resources :volunteers, only:[:new, :create]
+  resources :volunteers, only:[:new]
   
   get '/volunteers_reg' => 'volunteers#new'
   get '/register' => 'users#new'
