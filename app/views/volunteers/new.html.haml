@@ -2,4 +2,9 @@
 .row
   .col-sm-10
     %br
-    = render 'form'
+    -if @is_volunteer_reg_enabled
+      = render 'form'
+    -else
+      .jumbotron.text-center
+        %h4.closed
+          Volunteer Registration has closed. For any queries contact Shijil(8892324346) or Vignesh (9535321976)

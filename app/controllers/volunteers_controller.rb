@@ -1,7 +1,11 @@
 class VolunteersController < InheritedResources::Base
-  actions :new, :create
+  actions :new
   before_filter :init_volunteer_questions
   after_filter :after_volunteer_created, only: :create
+
+  def new
+    @is_volunteer_reg_enabled = false
+  end
 
   private
   def permitted_params
