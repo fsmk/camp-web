@@ -3,6 +3,11 @@ class PostController < ApplicationController
   def index
   end
 
+  def speakers
+    @title = "Speakers"
+    @speakers = Speaker.all
+  end
+
   def gallery
     @title = "Gallery"
     begin

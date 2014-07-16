@@ -1,3 +1,42 @@
-// Place all the styles related to the volunteers controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.profile-list{
+  @include make-row();
+  .profile{
+    @include make-md-column(6);
+    .data{
+      margin: 20px;
+      background: #ffffff;
+      @include box-shadow(1px 3px 2px #888888);
+      .details{
+        padding: 10px;
+        padding-left: 0px;
+        margin-left: -10px;
+        @media (min-width: $screen-md-min) {
+          margin-left: -20px;
+        }
+        .name {
+          font-size: 16px;
+          font-weight: bold;
+          color: #4f4f4f;
+        }
+        .email{
+          a{
+            color: #525252;
+          }
+        }
+        .git{
+          background:asset-url("GitHub-Mark.png") no-repeat 0 center;
+          padding: 3px;
+          padding-left: 25px;
+          a{
+            color: #120212;
+            font-size: 12px;
+          }
+        }
+        .description {
+          margin-top: 5px;
+          font-size: 13px;
+        }
+      }
+    }
+  }
+}

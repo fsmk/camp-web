@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140529205626) do
+ActiveRecord::Schema.define(version: 20140716212014) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -73,6 +73,19 @@ ActiveRecord::Schema.define(version: 20140529205626) do
     t.datetime "updated_at"
   end
 
+  create_table "speakers", force: true do |t|
+    t.string   "name",               null: false
+    t.string   "email",              null: false
+    t.string   "git_url"
+    t.text     "description"
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "users", force: true do |t|
     t.string   "first_name"
     t.string   "last_name"
@@ -111,19 +124,25 @@ ActiveRecord::Schema.define(version: 20140529205626) do
 
   create_table "volunteers", force: true do |t|
     t.string   "name"
-    t.string   "email",                                   null: false
+    t.string   "email",                                       null: false
     t.string   "gender"
     t.integer  "sem"
     t.string   "college"
     t.string   "branch"
     t.string   "phone"
-    t.boolean  "getting_laptop", default: false
+    t.boolean  "getting_laptop",     default: false
     t.string   "previous_camp"
-    t.boolean  "ready_to_pay",   default: false
+    t.boolean  "ready_to_pay",       default: false
     t.string   "t_shirt_size"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "status",         default: "not_verified", null: false
+    t.string   "status",             default: "not_verified", null: false
+    t.string   "git_url"
+    t.text     "description"
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
   end
 
   add_index "volunteers", ["email"], name: "index_volunteers_on_email", unique: true

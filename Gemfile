@@ -40,6 +40,7 @@ end
 
 # Use SCSS for stylesheets
   gem 'bootstrap-sass'
+  gem 'autoprefixer-rails'
 
 
 
@@ -70,3 +71,6 @@ gem 'kaminari'
 
 #For openlayers, used for openstreetmaps
 gem 'openlayers-rails'
+
+#for images
+gem "paperclip"

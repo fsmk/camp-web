@@ -11,11 +11,12 @@
  *= require jquery.ui.autocomplete
  *= require jquery.ui.datepicker
  *= require_self
- *= require_tree ./plugins
- *= require_tree ./application_css
  */
 
+@import "bootstrap-mincer";
 @import "bootstrap";
+@import "plugins/*";
+@import "application_css/*";
 
 .pull-down{
   margin-top: 100px;
@@ -68,5 +69,48 @@ input, textarea, select {
   .closed {
     color: #d62b2b;
     line-height: 30px;
+  }
+}
+
+/* Base styles (regardless of theme) */
+
+.bs-callout {
+  margin: 20px 0;
+  padding: 15px 30px 15px 15px;
+  border-left: 5px solid #eee;
+  h4 {
+    margin-top: 0;
+  }
+  p:last-child {
+    margin-bottom: 0;
+  }
+  code, .highlight {
+    background-color: #fff;
+  }
+}
+
+/* Themes for different contexts */
+
+.bs-callout-danger {
+  background-color: #fcf2f2;
+  border-color: #d9534f;
+  h4{
+    color: #d9534f;
+  }
+}
+
+.bs-callout-warning {
+  background-color: #fefbed;
+  border-color: #f0ad4e;
+  h4{
+    color: #f0ad4e;
+  }
+}
+
+.bs-callout-info {
+  background-color: #f0f7fd;
+  border-color: #5bc0de;
+  h4{
+    color: #5bc0de;
   }
 }
