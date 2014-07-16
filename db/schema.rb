@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140716162654) do
+ActiveRecord::Schema.define(version: 20140716212014) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -69,6 +69,19 @@ ActiveRecord::Schema.define(version: 20140716162654) do
     t.string   "contact_email"
     t.string   "mobile"
     t.text     "message"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "speakers", force: true do |t|
+    t.string   "name",               null: false
+    t.string   "email",              null: false
+    t.string   "git_url"
+    t.text     "description"
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

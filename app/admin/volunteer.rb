@@ -75,7 +75,7 @@ ActiveAdmin.register Volunteer do
       f.input :status, collection: [['Approved', 'approved'], ['Waiting list', 'waiting_list'], ['Not allowed', 'not_allowed'], ['Not verified', 'not_verified']]
       f.input :git_url
       f.input :description, label: "Description (HTML)"
-      f.input :photo, :required => false, :as => :file
+      f.input :photo, label: "Photo (Passport size)", :required => false, :as => :file
     end
     f.actions
   end
