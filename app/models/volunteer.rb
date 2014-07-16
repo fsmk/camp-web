@@ -5,4 +5,6 @@ class Volunteer < ActiveRecord::Base
   validates_format_of  :email, with: VALID_EMAIL_REGEXP, allow_blank: false
 
   has_many :volunteer_qas, dependent: :destroy
+  has_attached_file :photo, :styles => { :medium => "128x168>", :thumb => "100x100>" }, :default_url => "/system/error/:style/missing.jpg"
+  validates_attachment_content_type :photo, :content_type => /\Aimage\/.*\Z/
 end
