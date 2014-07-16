@@ -1,0 +1,25 @@
+.row
+  .col-xs-12
+    %h2.green Volunteers
+    -if collection.length > 0
+      .profile-list
+        - collection.each do |v|
+          .profile
+            .data
+              .row
+                .col-xs-5
+                  = image_tag v.photo.url(:medium)
+                .col-xs-7.details
+                  .name=v.name
+                  .email= link_to v.email, "mailto:#{v.email}"
+                  -if v.git_url.present?
+                    .git= link_to "Find me on github.com", v.git_url
+                  -if v.description.present?
+                    .description{title: ActionView::Base.full_sanitizer.sanitize(v.description)}
+                      -if v.description.length < 125
+                        =v.description.html_safe
+                      -else
+                        ="#{v.description[0..125]}...".html_safe
+    -else
+      .alert.alert-info
+        Volunteer info not updated

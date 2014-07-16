@@ -7,6 +7,11 @@ class VolunteersController < InheritedResources::Base
     @is_volunteer_reg_enabled = false
   end
 
+  protected
+    def collection
+      @volunteers ||= Volunteer.where(status: "approved")
+    end
+
   private
   def permitted_params
     params.permit(:volunteer => [:name, :email, :gender, :sem, :college, :branch, :phone, :getting_laptop, :previous_camp, :ready_to_pay, :t_shirt_size])
