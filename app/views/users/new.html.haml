@@ -1,14 +1,11 @@
 %h3.green Register now
 .row
   .col-sm-6
-    %p.lead
-      Please do read the
-      %a{href: "/faq", title: "Frequently Asked Questions"} Frequently Asked Questions
-      before registering. Once you register, you should recieve an email confirming your registration. Registration fees for the event is Rs. 4000. Based on the registration id and date, we will let you know if you are eligible for early bird registration discount of 10%. After registration, someone from FSMK will contact you regarding the collection of fees. Please note that delay in giving registration fees, may lead to cancellation of early bird registration discount. Feel free to
-      %a{href: "/contact/new", title: "Contact Us"} contact us
-      in case you have doubts.
+    .jumbotron.text-center
+      %h4.closed
+        Registration has been closed. For any queries contact Rakesh (+91-7204044233) or Shijil (+91-8892324346)
   .col-sm-6
-    %button.btn.btn-primary.btn-lg{"data-target" => "#register-modal", "data-toggle" => "modal"}
+    %button.btn.btn-primary.btn-lg.hidden{"data-target" => "#register-modal", "data-toggle" => "modal"}
       Register Now
     #register-modal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
       .modal-dialog

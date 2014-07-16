@@ -8,7 +8,7 @@ FsmkCampWebsite::Application.routes.draw do
 
   resources :post, only:[:index]
   resources :contact, only:[:new, :create]
-  resources :users, only:[:index, :new, :create]
+  resources :users, only:[:index, :new]
   resources :articles, only:[:index, :show]
   resources :volunteers, only:[:new, :index]
   
