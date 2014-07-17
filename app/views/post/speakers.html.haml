@@ -1,25 +1,24 @@
+= javascript_include_tag "plugins/jquery.waterfall.js"
 .row
   .col-xs-12
     %h2.green Speakers
     -if @speakers.length > 0
-      .profile-list
-        - @speakers.each do |s|
-          .profile
-            .data
-              .row
-                .col-xs-5
-                  = image_tag s.photo.url(:medium)
-                .col-xs-7.details
-                  .name=s.name
-                  .email= link_to s.email, "mailto:#{s.email}"
-                  -if s.git_url.present?
-                    .git= link_to "Find me on github.com", s.git_url
-                  -if s.description.present?
-                    .description{title: ActionView::Base.full_sanitizer.sanitize(s.description)}
-                      -if s.description.length < 125
-                        =s.description.html_safe
-                      -else
-                        ="#{s.description[0..125]}...".html_safe
+      .row
+        .col-md-12
+          .profile-list.waterfall{"data-col-min-width"=>"400"}
+            - @speakers.each do |s|
+              .profile
+                .data
+                  .row
+                    .col-xs-5
+                      = image_tag s.photo.url(:medium)
+                    .col-xs-7.details
+                      .name=s.name
+                      .email= link_to s.email, "mailto:#{s.email}"
+                      -if s.git_url.present?
+                        .git= link_to "Find me on github.com", s.git_url
+                      -if s.description.present?
+                        .description=s.description.html_safe
     -else
       .alert.alert-info
         Speakers info not updated

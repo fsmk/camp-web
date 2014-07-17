@@ -9,7 +9,7 @@ class VolunteersController < InheritedResources::Base
 
   protected
     def collection
-      @volunteers ||= Volunteer.where(status: "approved")
+      @volunteers ||= Volunteer.where(status: "approved").order('name')
     end
 
   private
