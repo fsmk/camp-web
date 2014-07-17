@@ -15,7 +15,9 @@
  *= require_tree ./application_css
  */
 
+@import "bootstrap-mincer";
 @import "bootstrap";
+@import "./need_to_fix/volunteers";
 
 .pull-down{
   margin-top: 100px;
