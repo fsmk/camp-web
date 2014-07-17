@@ -22,4 +22,7 @@ class PostController < ApplicationController
     @articles = Article.all
   end
 
+  def events
+  end
+
 end
