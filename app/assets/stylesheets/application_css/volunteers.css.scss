@@ -1,7 +1,5 @@
 .profile-list{
-  @include make-row();
   .profile{
-    @include make-md-column(6);
     .data{
       margin: 20px;
       background: #ffffff;
@@ -32,10 +30,21 @@
             font-size: 12px;
           }
         }
+        .sem{
+          padding: 1px;
+        }
+        .college{
+          padding: 1px;
+        }
         .description {
           margin-top: 5px;
           font-size: 13px;
         }
+      }
+      .message {
+        padding: 10px;
+        font-style: italic;
+        font-variant: small-caps;
       }
     }
   }

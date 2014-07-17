@@ -5,7 +5,7 @@ class PostController < ApplicationController
 
   def speakers
     @title = "Speakers"
-    @speakers = Speaker.all
+    @speakers = Speaker.order('name')
   end
 
   def gallery

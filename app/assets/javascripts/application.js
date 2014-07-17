@@ -21,5 +21,6 @@
 //= require ./plugins/jquery.blueimp-gallery
 //= require ./plugins/bootstrap-image-gallery
 //= require ./plugins/bootstrapValidator
+//= require ./plugins/zepto
 //= require openlayers-rails
 //= require_tree ./application_js
