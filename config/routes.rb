@@ -11,7 +11,9 @@ FsmkCampWebsite::Application.routes.draw do
   resources :users, only:[:index, :new]
   resources :articles, only:[:index, :show]
   resources :volunteers, only:[:new, :index]
-  
+  resources :feedbacks, only:[:new, :create]
+
+  get '/feedback' => 'feedbacks#new'
   get '/volunteers_reg' => 'volunteers#new'
   get '/register' => 'users#new'
   get '/about' => 'post#about'
