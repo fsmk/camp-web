@@ -7,47 +7,47 @@ xml.urlset "xmlns" => "http://www.sitemaps.org/schemas/sitemap/0.9" do
   end
 
   xml.url do
-    xml.loc "http://camp.fsmk.org/about"
+    xml.loc "http://camp.fsmk.org/2014/about"
     xml.priority 0.9
   end
 
   xml.url do
-    xml.loc "http://camp.fsmk.org/register"
+    xml.loc "http://camp.fsmk.org/2014/register"
     xml.priority 0.9
   end
 
   xml.url do
-    xml.loc "http://camp.fsmk.org/venue"
+    xml.loc "http://camp.fsmk.org/2014/venue"
     xml.priority 0.9
   end
 
   xml.url do
-    xml.loc "http://camp.fsmk.org/gallery"
+    xml.loc "http://camp.fsmk.org/2014/gallery"
     xml.priority 0.9
   end
   
   xml.url do
-    xml.loc "http://camp.fsmk.org/faq"
+    xml.loc "http://camp.fsmk.org/2014/faq"
     xml.priority 0.9
   end
 
   xml.url do
-    xml.loc "http://camp.fsmk.org/technologies"
+    xml.loc "http://camp.fsmk.org/2014/technologies"
     xml.priority 0.9
   end
 
   xml.url do
-    xml.loc "http://camp.fsmk.org/speakers"
+    xml.loc "http://camp.fsmk.org/2014/speakers"
     xml.priority 0.8
   end
 
   xml.url do
-    xml.loc "http://camp.fsmk.org/sponsors"
+    xml.loc "http://camp.fsmk.org/2014/sponsors"
     xml.priority 0.8
   end
 
   xml.url do
-    xml.loc "http://camp.fsmk.org/contact_us"
+    xml.loc "http://camp.fsmk.org/2014/contact_us"
     xml.priority 0.8
   end
 
