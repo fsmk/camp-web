@@ -1,0 +1,31 @@
+%h3.green Register now
+.row
+  .col-sm-6
+    .jumbotron.text-center
+      %h4.closed
+        Registration has been closed. For any queries contact Rakesh (+91-7204044233) or Shijil (+91-8892324346)
+  .col-sm-6
+    %button.btn.btn-primary.btn-lg.hidden{"data-target" => "#register-modal", "data-toggle" => "modal"}
+      Register Now
+    #register-modal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
+      .modal-dialog
+        .modal-content
+          .modal-header
+            %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} &times;
+            %h4#myModalLabel.modal-title Register for summer camp 2014
+          .modal-body
+            = render partial: 'form'
+          .modal-footer
+            %button.btn.btn-default{"data-dismiss" => "modal", type: "button"} Close
+            %button.btn.btn-primary#register-button Register
+    .row
+      .col-xs-12
+        %br
+        .jumbotron.text-center
+          %h4.date 2014 July 19 to 27
+    =render :partial => 'v2014/shared/remaining_day_for_camp'
+- if @user.errors.any?
+  :javascript
+    $(document).on('ready page:load', function(){
+      $("#register-modal").modal("show");
+    });

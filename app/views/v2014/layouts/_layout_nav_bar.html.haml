@@ -1,0 +1,33 @@
+%header
+  %nav.navbar.navbar-inverse.navbar-fixed-top{role: "navigation"}
+    .container-fluid
+      .navbar-header
+        %button.navbar-toggle{"data-target" => "#camp-nav-collaps", "data-toggle" => "collapse", type: "button"}
+          %span.sr-only Toggle navigation
+          %span.icon-bar
+          %span.icon-bar
+          %span.icon-bar
+        %a.navbar-brand{href: "/"} FSMK Camp
+      #camp-nav-collaps.collapse.navbar-collapse
+        %ul.nav.navbar-nav
+          %li{id: "post-about"}= link_to "About", v2014_about_path
+          %li{id: "users-new"}= link_to "Register for Camp", v2014_register_path
+          %li{id: "post-schedule"}= link_to "Schedule", v2014_schedule_path
+          %li{id: "post-venue"}= link_to "Venue", v2014_venue_path
+          %li{id: "post-gallery", "data-no-turbolink" => "true"}= link_to "Gallery", v2014_gallery_path
+          %li{id: "post-faq"}= link_to "FAQs", v2014_faq_path
+          %li{id: "contact-new"}= link_to "Contact Us", "/v2014/contact_us"
+          %li{id: "volunteers-index"}= link_to "Volunteers", v2014_volunteers_path
+          %li{id: "feedbacks-new"}= link_to "Feedback", new_v2014_feedback_path
+      .github-ribbon.visible-md.visible-lg
+        %a{href: "https://github.com/fsmk/camp-web", target: "_blank"}
+          = image_tag "fork_me.png", width: "100%", style: "border-width:1", alt: "Github fork", title: "Like this site, checkout the source code on our github repo."
+%script{type: "text/javascript"}
+  var navId = "\
+  = "#{controller_name}-#{action_name} \\"
+  ";
+  navId = navId.trim();
+:javascript
+  $(document).on('ready page:load', function(){
+  $("#"+navId).addClass("active");
+  });

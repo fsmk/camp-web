@@ -1,0 +1,61 @@
+= render partial: 'v2014/shared/error_messages', locals: { object: @user }
+= form_for @user, url: v2014_users_path, method: :create, :html => {:class => 'form-horizontal register-form'} do | form |
+  .form-group
+    .col-sm-12
+      =form.label(:first_name, :class => "sr-only")
+      =form.text_field :first_name, :class => 'form-control', placeholder: "First name", size: "30", maxlength: "50", "data-bv-notempty" => "", "data-bv-notempty-message" => "First name is required"
+  .form-group
+    .col-sm-12
+      =form.label(:last_name, :class => "sr-only")
+      =form.text_field :last_name, :class => 'form-control', placeholder: "Last name", size: "30", maxlength: "50", "data-bv-notempty" => "", "data-bv-notempty-message" => "Last name is required"
+  .form-group
+    .col-sm-12
+      =form.label(:gender, :class => "sr-only")
+      %select.form-control{name: "user[gender]"}
+        -["Male", "Female", "Third gender"].each do | g |
+          %option
+            = g
+  .form-group
+    .col-sm-12
+      =form.label(:email, :class => "sr-only")
+      =form.text_field :email, :class => 'form-control', placeholder: "Email", size: "30", maxlength: "100", "data-bv-notempty" => "", "data-bv-notempty-message" => "Email is required", "data-bv-emailaddress" => "true", "data-bv-emailaddress-message" => "Not a valid email"
+  .form-group
+    .col-sm-12
+      =form.label(:phone, :class => "sr-only")
+      =form.text_field :phone, :class => 'form-control', placeholder: "Phone", size: "30", maxlength: "13", "data-bv-notempty" => "", "data-bv-notempty-message" => "Phone is required"
+  .form-group
+    .col-sm-12
+      =form.label(:college, :class => "sr-only")
+      =form.text_field :college, :class => 'form-control', placeholder: "College", size: "30", maxlength: "100", "data-bv-notempty" => "", "data-bv-notempty-message" => "College is required"
+  .form-group
+    .col-sm-12
+      =form.label(:dept, "Department", :class => "sr-only")
+      =form.text_field :dept, :class => 'form-control', placeholder: "Department", size: "30", maxlength: "20", "data-bv-notempty" => "", "data-bv-notempty-message" => "Department is required"
+  .form-group
+    .col-sm-12
+      =form.label(:sem, "Semester", :class => "sr-only")
+      =form.number_field :sem, :class => 'form-control', placeholder: "Semester", size: "30", maxlength: "2", min: "1", max: "11", "data-bv-notempty" => "", "data-bv-notempty-message" => "Semester is required"
+  .form-group
+    .col-sm-12
+      =form.label(:city, :class => "sr-only")
+      =form.text_field :city, :class => 'form-control', placeholder: "City", size: "30", maxlength: "50", "data-bv-notempty" => "", "data-bv-notempty-message" => "City is required"
+  .form-group
+    .col-sm-12
+      =form.label(:state, :class => "sr-only")
+      =form.text_field :state, :class => 'form-control', placeholder: "State", size: "30", maxlength: "50", "data-bv-notempty" => "", "data-bv-notempty-message" => "State is required"
+  .form-group
+    .col-sm-12
+      .checkbox
+        .row
+          .col-sm-1.col-sm-offset-1
+            =form.check_box :getting_laptop, checked: "checked"
+          .col-sm-9
+            %b I'll bring laptop
+  .form-group
+    .col-sm-12
+      .checkbox
+        .row
+          .col-sm-1.col-sm-offset-1
+            =form.check_box :previous_camp
+          .col-sm-9
+            %b I attended previous camp

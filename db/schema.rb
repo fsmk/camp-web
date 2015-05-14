@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140730184759) do
+ActiveRecord::Schema.define(version: 20150514170436) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -53,6 +53,7 @@ ActiveRecord::Schema.define(version: 20140730184759) do
     t.string   "added_by"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "camp_version_id", default: 1, null: false
   end
 
   create_table "blogs", force: true do |t|
@@ -62,7 +63,16 @@ ActiveRecord::Schema.define(version: 20140730184759) do
     t.string   "link"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "camp_version_id", default: 1, null: false
   end
+
+  create_table "camp_versions", force: true do |t|
+    t.string   "name",       null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "camp_versions", ["name"], name: "index_camp_versions_on_name", unique: true
 
   create_table "contacts", force: true do |t|
     t.string   "name"
@@ -71,25 +81,27 @@ ActiveRecord::Schema.define(version: 20140730184759) do
     t.text     "message"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "camp_version_id", default: 1, null: false
   end
 
   create_table "feedbacks", force: true do |t|
-    t.string   "name",               null: false
-    t.string   "email",              null: false
-    t.integer  "age",                null: false
-    t.string   "college",            null: false
-    t.string   "role",               null: false
-    t.string   "how_long_been_part", null: false
+    t.string   "name",                           null: false
+    t.string   "email",                          null: false
+    t.integer  "age",                            null: false
+    t.string   "college",                        null: false
+    t.string   "role",                           null: false
+    t.string   "how_long_been_part",             null: false
     t.text     "activities"
-    t.text     "suggestions",        null: false
-    t.text     "how_you_contribute", null: false
+    t.text     "suggestions",                    null: false
+    t.text     "how_you_contribute",             null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "camp_version_id",    default: 1, null: false
   end
 
   create_table "speakers", force: true do |t|
-    t.string   "name",               null: false
-    t.string   "email",              null: false
+    t.string   "name",                           null: false
+    t.string   "email",                          null: false
     t.string   "git_url"
     t.text     "description"
     t.string   "photo_file_name"
@@ -98,6 +110,7 @@ ActiveRecord::Schema.define(version: 20140730184759) do
     t.datetime "photo_updated_at"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "camp_version_id",    default: 1, null: false
   end
 
   create_table "users", force: true do |t|
@@ -129,11 +142,12 @@ ActiveRecord::Schema.define(version: 20140730184759) do
   end
 
   create_table "volunteer_questions", force: true do |t|
-    t.string   "question",   null: false
-    t.string   "qtype",      null: false
+    t.string   "question",                    null: false
+    t.string   "qtype",                       null: false
     t.string   "options"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "camp_version_id", default: 1, null: false
   end
 
   create_table "volunteers", force: true do |t|
@@ -157,6 +171,7 @@ ActiveRecord::Schema.define(version: 20140730184759) do
     t.string   "photo_content_type"
     t.integer  "photo_file_size"
     t.datetime "photo_updated_at"
+    t.integer  "camp_version_id",    default: 1,              null: false
   end
 
   add_index "volunteers", ["email"], name: "index_volunteers_on_email", unique: true

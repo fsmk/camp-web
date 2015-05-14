@@ -1,0 +1,28 @@
+%title
+  - if @title.present?
+    = @title
+  - else
+    FSMK Camp
+%meta{charset: "utf-8"}
+%meta{content: "IE=edge", "http-equiv" => "X-UA-Compatible"}
+%meta{content: "width=device-width, initial-scale=1", name: "viewport"}
+%title FSMK Summer Camp 2014
+%meta{content: "Free Software Movement Karnataka (FSMK) is planning a 9 days Industry Orientation workshop during the summer break , July 19 - 27.", name: "description"}
+%meta{content: "fsmk, FSMK, camp, summer, 2014,  Free, Software, Movement, Karnataka, ", name: "keywords"}
+%meta{content: "index,follow", name: "robot"}
+%meta{content: "This work is licensed under a Creative Commons Attribution 3.0 Unported License", name: "copyright"}
+%meta{content: "FSMK", name: "author"}
+%meta{content: "1", name: "revisit-after"}
+%meta{content: "http://camp.fsmk.org#{asset_path("FSMKcamps.png")}", property: "og:image"}
+%meta{content: "FSMK Summer Camp 2014", property: "og:title"}
+%meta{content: "Free Software Movement Karnataka (FSMK) is planning a 9 days Industry Orientation workshop during the summer break , July 19 - 27.", property: "og:description"}
+%link{href: image_path("fav_icon.png"), rel: "icon", type: "image/png"}
+= stylesheet_link_tag    "v2014_application", media: "all", "data-turbolinks-track" => true
+= javascript_include_tag "v2014_application", "data-turbolinks-track" => true
+= csrf_meta_tags
+%script{type: "text/javascript"}
+  var assetPath = "\
+  = asset_path("fav_icon.png") + " \\"
+  ";
+  assetPath = assetPath.trim();
+  assetPath = assetPath.substring(0, assetPath.lastIndexOf("/") + 1);

@@ -71,10 +71,8 @@ gem 'flickr_fu'
 #settings
 gem 'settingslogic'
 
-#jquery ui
-gem 'jquery-ui-rails'
-
 #for super admin
+gem 'devise'
 gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'kaminari'
 
@@ -83,3 +81,5 @@ gem 'openlayers-rails'
 
 #for images
 gem "paperclip"
+
+gem 'jquery-ui-rails'

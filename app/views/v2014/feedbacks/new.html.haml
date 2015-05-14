@@ -1,0 +1,38 @@
+%h3.green Feedback
+.row
+  .col-sm-10
+    %br
+    = render partial: 'v2014/shared/error_messages', locals: { object: @feedback }
+    = form_for [:v2014, @feedback], :html => {role: "form"}  do |f|
+      .form-group
+        =f.label :name
+        =f.text_field :name, :class => 'form-control', placeholder: "Name", size: "30", maxlength: "100", "data-bv-notempty" => "", "data-bv-notempty-message" => "Name is required"
+      .form-group
+        =f.label :email
+        =f.text_field :email, :class => 'form-control', placeholder: "Email", size: "30", maxlength: "100", "data-bv-notempty" => "", "data-bv-notempty-message" => "Email is required", "data-bv-emailaddress" => "true", "data-bv-emailaddress-message" => "Not a valid email"
+      .form-group
+        =f.label :age
+        =f.number_field :age, :class => 'form-control', placeholder: "Age", size: "30", maxlength: "2", min: "1", max: "99", "data-bv-notempty" => "", "data-bv-notempty-message" => "Age is required"
+      .form-group
+        =f.label :college
+        =f.text_field :college, :class => 'form-control', placeholder: "College", size: "30", maxlength: "100", "data-bv-notempty" => "", "data-bv-notempty-message" => "College is required"
+      .form-group
+        =f.label :role, "What was your role in the FSMSC14?"
+        %select.form-control{name: "feedback[role]"}
+          -["Participant", "Volunteer"].each do | v |
+            %option
+              = v
+      .form-group
+        =f.label :how_long_been_part, "How long have you been a part of FSMK?"
+        =f.text_field :how_long_been_part, :class => 'form-control', placeholder: "eg: Around 1 and half year...", size: "30", "data-bv-notempty" => "", "data-bv-notempty-message" => "This feild is required"
+      .form-group
+        =f.label :activities, "Have you been a part of social work/community related activities before? If yes, please elaborate?"
+        =f.text_area :activities, :class => 'form-control', placeholder: "(Optional)", size: "30"
+      .form-group
+        =f.label :suggestions, "Suggestions to improve the camp. in terms of format, technologies, etc."
+        =f.text_area :suggestions, :class => 'form-control', placeholder: "Feel free to tell us :)", size: "30", "data-bv-notempty" => "", "data-bv-notempty-message" => "This feild is required",  "data-bv-stringlength" => "", "data-bv-stringlength-min" => 50, "data-bv-stringlength-message" => "Minimum 50 characters"
+      .form-group
+        =f.label :how_you_contribute, "How would you like to contribute to FSMK ?"
+        =f.text_area :how_you_contribute, :class => 'form-control', size: "30", "data-bv-notempty" => "", "data-bv-notempty-message" => "This feild is required",  "data-bv-stringlength" => "", "data-bv-stringlength-min" => 50, "data-bv-stringlength-message" => "Minimum 50 characters"
+      %button.btn.btn-primary{type: "submit", value: "Save"} Submit
+
