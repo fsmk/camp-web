@@ -17,10 +17,10 @@
 //= require jquery.ui.effect-slide
 //= require turbolinks
 //= require bootstrap
-//= require ./plugins/plugins
-//= require ./plugins/jquery.blueimp-gallery
-//= require ./plugins/bootstrap-image-gallery
-//= require ./plugins/bootstrapValidator
-//= require ./plugins/zepto
+//= require ./v2014/plugins/plugins
+//= require ./v2014/plugins/jquery.blueimp-gallery
+//= require ./v2014/plugins/bootstrap-image-gallery
+//= require ./v2014/plugins/bootstrapValidator
+//= require ./v2014/plugins/zepto
 //= require openlayers-rails
-//= require_tree ./application_js
+//= require_tree ./v2014/application_js

@@ -11,13 +11,13 @@
  *= require jquery.ui.autocomplete
  *= require jquery.ui.datepicker
  *= require_self
- *= require_tree ./plugins
- *= require_tree ./application_css
+ *= require_tree ./v2014/plugins
+ *= require_tree ./v2014/application_css
  */
 
 @import "bootstrap-mincer";
 @import "bootstrap";
-@import "./need_to_fix/volunteers";
+@import "./v2014/need_to_fix/volunteers";
 
 .pull-down{
   margin-top: 100px;
