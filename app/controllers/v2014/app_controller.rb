@@ -4,9 +4,15 @@ class V2014::AppController < InheritedResources::Base
 
   LAYOUT_PATH = "../v2014/layouts/"
 
+  protected
+    def begin_of_association_chain
+      @version
+    end
+
   private
   def init_blog
-    @blogs = Blog.all
+    @version = CampVersion.find_by_name "v2014"
+    @blogs = @version.blogs.all
   end
   def resolve_layout
     result = nil

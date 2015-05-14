@@ -9,7 +9,7 @@ class V2014::VolunteersController < V2014::AppController
 
   protected
     def collection
-      @volunteers ||= Volunteer.where(status: "approved").order('name')
+      @volunteers ||= @version.volunteers.where(status: "approved").order('name')
     end
 
   private

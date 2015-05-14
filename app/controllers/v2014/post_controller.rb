@@ -5,7 +5,7 @@ class V2014::PostController < V2014::AppController
 
   def speakers
     @title = "Speakers"
-    @speakers = Speaker.order('name')
+    @speakers = @version.speakers.order('name')
   end
 
   def gallery
