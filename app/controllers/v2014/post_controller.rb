@@ -18,10 +18,6 @@ class V2014::PostController < V2014::AppController
     end
   end
 
-  def sitemap
-    @articles = Article.all
-  end
-
   def events
   end
 

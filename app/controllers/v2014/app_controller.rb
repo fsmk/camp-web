@@ -1,8 +1,8 @@
 class V2014::AppController < InheritedResources::Base
   before_filter :init_blog
-  layout "v2014/layouts/application"
+  layout :resolve_layout
 
-  LAYOUT_PATH = "../v2014/layouts/"
+  LAYOUT_PATH = "v2014/layouts/"
 
   protected
     def begin_of_association_chain

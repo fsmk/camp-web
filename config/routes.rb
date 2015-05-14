@@ -2,7 +2,7 @@ FsmkCampWebsite::Application.routes.draw do
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
-  get "/sitemap.:format", controller: "v2014/post", action: "sitemap"
+  get "/sitemap.:format", controller: "main", action: "sitemap"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -32,7 +32,8 @@ FsmkCampWebsite::Application.routes.draw do
   end
 
   namespace :v2015 do
-    resources :contact, only:[:new, :create]
+    resources :home
+    get "/" => 'home#index'
   end
-  root 'v2014/post#index'
+  root 'v2015/home#index'
 end

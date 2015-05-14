@@ -51,9 +51,9 @@ xml.urlset "xmlns" => "http://www.sitemaps.org/schemas/sitemap/0.9" do
     xml.priority 0.8
   end
 
-  @articles.each do |article|
+  Article.all.each do |article|
     xml.url do
-      xml.loc article_url(article)
+      xml.loc(article.camp_version.name == "v2014" ? v2014_article_url(article) : nil)
       xml.priority 0.7
     end
   end
