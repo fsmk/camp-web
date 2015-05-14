@@ -12,4 +12,4 @@
         %ul
           -@articles_by_date[date].each do |article|
             %li
-              =link_to article.name, article
+              =link_to article.name, v2014_article_path(article)

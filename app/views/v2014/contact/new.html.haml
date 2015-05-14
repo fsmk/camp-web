@@ -31,8 +31,8 @@
   .col-md-5.jumbotron
     .row
       .span4
-        =form_for @contact, url: contact_index_path, method: :post do | form |
-          = render partial: 'shared/error_messages', locals: { object: @contact }
+        =form_for @contact, url: v2014_contact_index_path, method: :post do | form |
+          = render partial: 'v2014/shared/error_messages', locals: { object: @contact }
           .form-field.control-group
             =form.label "Your name", class: 'green'
             =form.text_field :name

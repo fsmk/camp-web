@@ -1,5 +1,5 @@
-= render partial: 'shared/error_messages', locals: { object: @user }
-= form_for @user, url: users_path, method: :create, :html => {:class => 'form-horizontal register-form'} do | form |
+= render partial: 'v2014/shared/error_messages', locals: { object: @user }
+= form_for @user, url: v2014_users_path, method: :create, :html => {:class => 'form-horizontal register-form'} do | form |
   .form-group
     .col-sm-12
       =form.label(:first_name, :class => "sr-only")

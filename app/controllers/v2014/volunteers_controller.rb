@@ -1,4 +1,4 @@
-class VolunteersController < InheritedResources::Base
+class V2014::VolunteersController < V2014::AppController
   actions :new
   before_filter :init_volunteer_questions
   after_filter :after_volunteer_created, only: :create

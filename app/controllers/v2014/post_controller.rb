@@ -1,4 +1,4 @@
-class PostController < ApplicationController
+class V2014::PostController < V2014::AppController
 
   def index
   end

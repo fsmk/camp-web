@@ -1,4 +1,4 @@
-class UsersController < ApplicationController
+class V2014::UsersController < V2014::AppController
   def index
     redirect_to new_user_path
   end

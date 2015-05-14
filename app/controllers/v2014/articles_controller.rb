@@ -1,4 +1,4 @@
-class ArticlesController < InheritedResources::Base
+class V2014::ArticlesController < V2014::AppController
   def index
     @articles = Article.all
     @articles_by_date = @articles.group_by(&:event_date)

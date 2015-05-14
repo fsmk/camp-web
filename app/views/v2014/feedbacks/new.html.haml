@@ -2,8 +2,8 @@
 .row
   .col-sm-10
     %br
-    = render partial: 'shared/error_messages', locals: { object: @feedback }
-    = form_for @feedback, :html => {role: "form"}  do |f|
+    = render partial: 'v2014/shared/error_messages', locals: { object: @feedback }
+    = form_for [:v2014, @feedback], :html => {role: "form"}  do |f|
       .form-group
         =f.label :name
         =f.text_field :name, :class => 'form-control', placeholder: "Name", size: "30", maxlength: "100", "data-bv-notempty" => "", "data-bv-notempty-message" => "Name is required"

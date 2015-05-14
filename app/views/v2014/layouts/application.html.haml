@@ -1,9 +1,9 @@
 !!!
 %html
   %head
-    =render :partial => 'layouts/layout_header'
+    =render :partial => 'v2014/layouts/layout_header'
   %body
-    =render :partial => 'layouts/layout_nav_bar'
+    =render :partial => 'v2014/layouts/layout_nav_bar'
     .sticky-container
       %ul.sticky
         %li
@@ -32,8 +32,8 @@
           %h5 Camp memories 2013
           = content_tag "div", "",id: "blog-slider", data: {blogs: @blogs}
         %hr.featurette-divider
-        =render :partial => 'shared/remaining_day_for_camp'
+        =render :partial => 'v2014/shared/remaining_day_for_camp'
       .col-sm-9
-        =render :partial => 'shared/flash_messages'
+        =render :partial => 'v2014/shared/flash_messages'
         = yield
-    =render :partial => 'layouts/layout_footer'
+    =render :partial => 'v2014/layouts/layout_footer'

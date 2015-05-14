@@ -1,0 +1,10 @@
+!!!
+%html
+  %head
+    =render :partial => 'v2014/layouts/layout_header'
+  %body
+    =render :partial => 'v2014/layouts/layout_nav_bar'
+    .container.pull-down.with-padding
+      =render :partial => 'v2014/shared/flash_messages'
+      = yield
+    =render :partial => 'v2014/layouts/layout_footer'

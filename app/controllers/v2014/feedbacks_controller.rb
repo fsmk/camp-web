@@ -1,4 +1,4 @@
-class FeedbacksController < InheritedResources::Base
+class V2014::FeedbacksController < V2014::AppController
   
   def create
     create!(:notice => "Thanks for your feedback."){ root_url }
