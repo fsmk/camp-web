@@ -1,0 +1,36 @@
+%script{src: "//cdn.jsdelivr.net/jquery.waterfall/0.1/jquery.waterfall.min.js"}
+.row
+  .col-xs-12
+    %h2.green Volunteers
+    -if collection.length > 0
+      .row
+        .col-md-12
+          .profile-list.waterfall{"data-col-min-width"=>"400"}
+            - collection.each do |v|
+              .profile
+                .data
+                  .row
+                    .col-xs-5
+                      = image_tag v.photo.url(:medium)
+                    .col-xs-7.details
+                      .name=v.name
+                      .email= link_to v.email, "mailto:#{v.email}"
+                      .sem
+                        Sem :
+                        =v.sem
+                      .college
+                        College :
+                        =v.college
+                      -if v.git_url.present?
+                        .git= link_to "Find me on github.com", v.git_url
+                      -if v.description.present?
+                        .description=v.description.html_safe
+                  .row
+                    .col-xs-12
+                      .message
+                        "
+                        =v.volunteer_qas.find_by_volunteer_question_id(2).answer
+                        "
+    -else
+      .alert.alert-info
+        Volunteer info not updated

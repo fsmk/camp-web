@@ -1,0 +1,27 @@
+.blog-slider{
+  margin: 5px;
+  margin-top: 0px;
+  padding: 15px;
+  background-color: #F3F3F3;
+  border-style: solid;
+  border-color: #CFCBCF;
+  border-width: 1px;
+  padding-top: 5px;
+  .title {
+    color: green;
+  }
+  .body {
+    font-size: 16px;
+    padding-left: 15px;
+    color: #5a5a5a;
+  }
+  .author {
+    font-style: italic;
+    text-transform: uppercase;
+    color: #5a5a5a;
+  }
+  h5 {
+    font-variant: small-caps;
+    color: #ababab;
+  }
+}

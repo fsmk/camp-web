@@ -4,5 +4,7 @@
     =render :partial => 'v2015/layouts/layout_header'
   %body
     =render :partial => 'v2015/layouts/layout_nav_bar'
-    = yield
+    .container.pull-down.with-padding
+      =render :partial => 'v2015/shared/flash_messages'
+      = yield
     =render :partial => 'v2015/layouts/layout_footer'

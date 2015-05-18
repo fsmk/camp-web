@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150514170436) do
+ActiveRecord::Schema.define(version: 20150518180000) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -70,6 +70,8 @@ ActiveRecord::Schema.define(version: 20150514170436) do
     t.string   "name",       null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.time     "start_at"
+    t.time     "end_at"
   end
 
   add_index "camp_versions", ["name"], name: "index_camp_versions_on_name", unique: true

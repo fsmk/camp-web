@@ -1,0 +1,10 @@
+%h3.green Volunteer Registration
+.row
+  .col-sm-10
+    %br
+    -if @is_volunteer_reg_enabled
+      = render 'form'
+    -else
+      .jumbotron.text-center
+        %h4.closed
+          Volunteer Registration has closed. For any queries contact Shijil(8892324346) or Vignesh (9535321976)

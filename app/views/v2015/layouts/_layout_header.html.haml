@@ -20,3 +20,9 @@
 = stylesheet_link_tag    "v2015_application", media: "all", "data-turbolinks-track" => true
 = javascript_include_tag "v2015_application", "data-turbolinks-track" => true
 = csrf_meta_tags
+%script{type: "text/javascript"}
+  var assetPath = "\
+  = asset_path("fav_icon.png") + " \\"
+  ";
+  assetPath = assetPath.trim();
+  assetPath = assetPath.substring(0, assetPath.lastIndexOf("/") + 1);
