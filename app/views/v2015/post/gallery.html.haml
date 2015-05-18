@@ -1,0 +1,30 @@
+.row
+  .col-sm-12
+    %h2.green FSMK photo gallery
+    %blockquote
+      %p FSMK Camps are promised to be fun. We have amazing volunteers who are committed to the Free Software philosophy and the movement and do their best to ensure that all participants enjoy the camp to their fullest. Do check the photos shared below of the Summer Camp 2013 held at Jnana Vikas Institute of Technology, Bidadi.
+    - if @photos.length == 0
+      .row
+        .col-sm-4.col-sm-offset-4
+          .alert.alert-info
+            Upload photos to FSMK Flickr account
+    - else
+      %form.form-inline
+        .form-group
+          %button#image-gallery-button.btn.btn-primary.btn-lg{type: "button"}
+            %i.glyphicon.glyphicon-picture
+            Launch Image Gallery
+        .btn-group.pull-right{"data-toggle" => "buttons"}
+          %label.btn.btn-success.btn-lg
+            %i.glyphicon.glyphicon-leaf
+            %input#borderless-checkbox{type: "checkbox"}
+            Borderless
+          %label.btn.btn-primary.btn-lg
+            %i.glyphicon.glyphicon-fullscreen
+            %input#fullscreen-checkbox{type: "checkbox"}
+            Fullscreen
+      %br
+      #links
+        - @photos.each do |photo|
+          %a{"data-gallery" => "", href: photo.url, title: photo.title}
+            %img{alt: photo.title, src: photo.url(:thumbnail)}

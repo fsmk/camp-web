@@ -1,0 +1,22 @@
+{
+    "volunteer": [
+         {
+         "category": "T Shirt Design and Printing",
+            "name":[ { "name":"Shashank"}  ],
+            "contact":[ { "contact":"000000"}  ],
+            "email":[ { "email":"a.mail"}  ]
+         },
+         {
+         "category": "Camp Manual",
+            "name":[ { "name":"Abhiram"},{ "name":"Nitin"},{ "name":"Harshitha"},{ "name":"Rohit"}  ],
+            "contact":[ { "contact":"000000"}, { "contact":"000000"} , { "contact":"00000"} , { "contact":"00000"}   ],
+            "email":[ { "email":"x.mail"},{ "email":"y.mail"},{ "email":"z.mail"},{ "email":"k.mail"}  ]
+         },
+    {
+        "category": "Posters and Banners",
+            "name":[ { "name":"Abhishek"}  ],
+            "contact":[ { "contact":"000000"}  ],
+            "email":[ { "email":"abi.mail"}  ]
+         }
+    ]
+}

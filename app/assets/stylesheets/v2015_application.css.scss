@@ -1,0 +1,115 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree ./v2015/plugins
+ *= require_tree ./v2015/application_css
+ */
+
+@import "bootstrap-mincer";
+@import "bootstrap";
+@import "./v2015/need_to_fix/volunteers";
+
+.pull-down{
+  margin-top: 100px;
+}
+
+#error_explanation {
+  color: red;
+  ul {
+    list-style: none;
+    margin: 0 0 18px 0;
+  }
+}
+
+.ui-autocomplete { z-index:2147483647; }
+
+input, textarea, select {
+  border: 2px solid #bbb;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.green, %label {
+  color: green;
+}
+
+.container{
+  width:100%;
+}
+
+.with-padding {
+  padding: 50px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.lead {
+  font-size: 18px;
+}
+.back-to-top {
+  padding: 10px;
+}
+.date {
+  color: #575e82;
+  text-transform: capitalize;
+  font-variant: small-caps;
+  font-weight: bold;
+  font-size: 25px;
+}
+.jumbotron {
+  .closed {
+    color: #d62b2b;
+    line-height: 30px;
+  }
+}
+
+/* Base styles (regardless of theme) */
+
+.bs-callout {
+  margin: 20px 0;
+  padding: 15px 30px 15px 15px;
+  border-left: 5px solid #eee;
+  h4 {
+    margin-top: 0;
+  }
+  p:last-child {
+    margin-bottom: 0;
+  }
+  code, .highlight {
+    background-color: #fff;
+  }
+}
+
+/* Themes for different contexts */
+
+.bs-callout-danger {
+  background-color: #fcf2f2;
+  border-color: #d9534f;
+  h4{
+    color: #d9534f;
+  }
+}
+
+.bs-callout-warning {
+  background-color: #fefbed;
+  border-color: #f0ad4e;
+  h4{
+    color: #f0ad4e;
+  }
+}
+
+.bs-callout-info {
+  background-color: #f0f7fd;
+  border-color: #5bc0de;
+  h4{
+    color: #5bc0de;
+  }
+}
