@@ -7,11 +7,11 @@
     .sticky-container
       %ul.sticky
         %li
-          %a{href:"https://www.facebook.com/fsmksummercamp14", target:"_blank"}
+          %a{href:"https://www.facebook.com/fsmksummercamp15", target:"_blank"}
             = image_tag "social/icon-facebook.png", height: "32", width: "32", alt: "Facebook"
             %p Facebook
         %li
-          %a{href:"https://twitter.com/FSMKSC14", target:"_blank"}
+          %a{href:"https://twitter.com/fsmk_org", target:"_blank"}
             = image_tag "social/icon-twitter.png", height: "32", width: "32", alt: "Twitter"
             %p Twitter
 
@@ -21,16 +21,17 @@
           Free Software Movement Karnataka
         %a{href: "http://fsmk.org", rel: "FSMK's Site", target: "_blank"}
           = image_tag "FSMK_Logo.png", width: "100%", style: "border-width:1", alt: "FSMK's site"
-        %hr.featurette-divider
-        =link_to(image_tag("college-logo.png", alt: "Dayananda Sagar College Of Engineering", :class => "img-responsive"), "http://www.sflc.in", target: "_blank")
-        %hr.featurette-divider
-        %p.lead
-          Sponsor
-        =link_to(image_tag("sponsor/sflclogo-small.png", alt: "sflc.in", :class => "img-responsive"), "http://www.sflc.in", target: "_blank")
-        %hr.featurette-divider
-        .blog-slider
-          %h5 Camp memories 2013
-          = content_tag "div", "",id: "blog-slider", data: {blogs: @blogs}
+        /
+          %hr.featurette-divider
+          =link_to(image_tag("college-logo.png", alt: "Dayananda Sagar College Of Engineering", :class => "img-responsive"), "http://www.sflc.in", target: "_blank")
+          %hr.featurette-divider
+          %p.lead
+            Sponsor
+          =link_to(image_tag("sponsor/sflclogo-small.png", alt: "sflc.in", :class => "img-responsive"), "http://www.sflc.in", target: "_blank")
+          %hr.featurette-divider
+          .blog-slider
+            %h5 Camp memories 2013
+            = content_tag "div", "",id: "blog-slider", data: {blogs: @blogs}
         %hr.featurette-divider
         =render :partial => 'v2015/shared/remaining_day_for_camp'
       .col-sm-9

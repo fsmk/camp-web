@@ -1,11 +1,11 @@
 %h3.green Register now
 .row
-  .col-sm-6
+  .col-sm-6.hidden
     .jumbotron.text-center
       %h4.closed
         Registration has been closed. For any queries contact Rakesh (+91-7204044233) or Shijil (+91-8892324346)
   .col-sm-6
-    %button.btn.btn-primary.btn-lg.hidden{"data-target" => "#register-modal", "data-toggle" => "modal"}
+    %button.btn.btn-primary.btn-lg{"data-target" => "#register-modal", "data-toggle" => "modal"}
       Register Now
     #register-modal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
       .modal-dialog
