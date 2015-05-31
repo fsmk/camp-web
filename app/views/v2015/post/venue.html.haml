@@ -1,37 +1,45 @@
 .row
   .col-md-7
-    %h3.green Venue Information:
-    %p.lead We are in touch with various colleges and we will update about the camp venue soon. It will be in one of the popular colleges in Bangalore.
+    %h2.green
+      Venue Update:
+      %span.text-muted Reva University
+    %p.lead 
+      FSMK is glad to announce that Reva University has agreed to be the co-organizer and host the summer camp in their campus. Please check
+      %a{:href => v2015_venue_path} the venue page for more information.
+  .col-md-5
+    .bs-callout.bs-callout-info
+      = image_tag "v2015/college-logo.png", alt: "Reva University", :class => "featurette-image img-responsive"
+%hr.featurette-divider
+  %h4.green Majestic to Reva University
+  %p
+    If you're coming to venue from Majestic (Kempegowda Bus Station), you can take the following buses:
     %br
-    /
-      .bs-callout.bs-callout-info
-        %h4 Majestic to DSCE
-        %p
-          If you're coming to Dayananda Sagar College of Engineering (the venue of this year's Summer Camp) from Majestic (K.B.S), you can take the following buses:
-          %b
-            15E, 15G, 15C, 210AA, 210A, 210R, 210U, 210X
-          %br
-          %br
-          The platform numbers are 8 and 13.
-          %br
-          %br
-          It should take around 40-45 minutes in regular traffic and the bus fare is approximately ₹21.     
-      %h3.green Address:
-      %p.lead
-        %address
-          %strong Dayananda Sagar College of Engineering
-          %br
-          College Rd, Shavige Malleshwara Hills,
-          %br
-          Kumaraswamy Layout, Bangalore, Karnataka - 560078
-      %h3.green
-        = "Get in touch"
-      %p.lead
-        Please do 
-        %a{:href => v2015_contact_us_path} Contact Us
-        in case you have any doubts regarding the venue. Also check the 
-        %a{:href => v2015_faq_path} FAQs Page
-        for frequently asked questions regarding the hostel facilities.
-    .col-md-5
-      #map
+    %b
+      
+      /TODO Add bus number
+      %br
+      The platform numbers are 
+      /TODO Platform number are
+      %br
+    %br
+    %br
+    It should take around 90 minutes in regular traffic.     
+    %h3.green Address:
+    %p.lead
+      %address
+        %strong REVA University
+        %br
+        Rukmini Knowledge Park,
+        %br
+        Kattigenahalli,Yelahanka, Bangalore - 560064      
+    %h3.green
+      = "Get in touch"
+    %p.lead
+      Please do 
+      %a{:href => v2015_contact_us_path} Contact Us
+      in case you have any doubts regarding the venue. Also check the 
+      %a{:href => v2015_faq_path} FAQs Page
+      for frequently asked questions regarding the hostel facilities.
+  .col-md-5
+    #map
        

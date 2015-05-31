@@ -1,7 +1,6 @@
 class CampVersion < ActiveRecord::Base
   validates_presence_of :name
   validates_uniqueness_of :name
-  belongs_to :camp_version
 
   has_many :articles, dependent: :destroy
   has_many :blogs, dependent: :destroy
