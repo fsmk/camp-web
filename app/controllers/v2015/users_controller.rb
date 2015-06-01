@@ -23,6 +23,6 @@ class V2015::UsersController < V2015::AppController
 
   private
   def user_params
-    params.require(:user).permit(:first_name, :last_name, :gender, :college, :dept, :sem, :getting_laptop, :city, :state, :email, :phone, :previous_camp)
+    params.require(:user).permit(:first_name, :last_name, :gender, :college, :dept, :sem, :getting_laptop, :city, :state, :email, :phone, :track, :previous_camp)
   end
 end
