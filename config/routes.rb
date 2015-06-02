@@ -9,7 +9,7 @@ FsmkCampWebsite::Application.routes.draw do
   namespace :v2014 do
     resources :post, only:[:index]
     resources :contact, only:[:new, :create]
-    resources :users, only:[:index, :new]
+    resources :users, only:[:index, :new, :create]
     resources :articles, only:[:index, :show]
     resources :volunteers, only:[:new, :index]
     resources :feedbacks, only:[:new, :create]
@@ -34,7 +34,7 @@ FsmkCampWebsite::Application.routes.draw do
   namespace :v2015 do
     resources :post, only:[:index]
     resources :contact, only:[:new, :create]
-    resources :users, only:[:index, :new]
+    resources :users, only:[:index, :new, :create]
     resources :articles, only:[:index, :show]
     resources :volunteers, only:[:new, :index]
     resources :feedbacks, only:[:new, :create]

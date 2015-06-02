@@ -9,4 +9,5 @@ class CampVersion < ActiveRecord::Base
   has_many :speakers, dependent: :destroy
   has_many :volunteers, dependent: :destroy
   has_many :volunteer_questions, dependent: :destroy
+  has_many :users, dependent: :destroy
 end
