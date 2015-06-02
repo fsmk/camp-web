@@ -2,13 +2,15 @@ class V2015::UsersController < V2015::AppController
   def index
     redirect_to new_user_path
   end
+
   def new
-   @user = User.new
+   @user = @version.users.build
   end
+  
   def create
-   @user = User.new(user_params)
+   @user = @version.users.build(user_params)
    if @user.save
-    if @user.is_approvable
+    if @user.is_approvable @version
       flash[:success] = "Thank you for registrations. Your id number is #{@user.id}. A mail regarding the payment of registration fees will be sent to you soon. Please follow the instructions given in the same."
     else
       @user.status = "waiting_list"
