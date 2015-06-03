@@ -51,19 +51,19 @@
             %b Select the track you are interested in to participate. Please note that the seats are limited and if your seat is confirmed, you will hear back from us.
         .row    
           .col-sm-1.col-sm-offset-1
-            = radio_button_tag(:track, "android")
+            = form.radio_button(:track, "android", checked: true)
           .col-sm-9
-            = label_tag(:track_android, "Mobile App Development")
+            = form.label(:track_android, "Mobile App Development")
         .row
           .col-sm-1.col-sm-offset-1
-            = radio_button_tag(:track, "sysad")
+            = form.radio_button(:track, "sysad")
           .col-sm-9
-            = label_tag(:track_sysad, "System Administration and Networking")
+            = form.label(:track_sysad, "System Administration and Networking")
         .row
           .col-sm-1.col-sm-offset-1
-            = radio_button_tag(:track, "hardware")
+            = form.radio_button(:track, "hardware")
           .col-sm-9
-            = label_tag(:track_hardware, "Open Hardware")
+            = form.label(:track_hardware, "Open Hardware")
   .form-group
     .col-sm-12
       .checkbox
