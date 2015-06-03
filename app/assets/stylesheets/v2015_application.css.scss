@@ -113,9 +113,23 @@ input, textarea, select {
     color: #5bc0de;
   }
 }
+
 .navbar-inverse{
   background-color: #FFF;
   border-color: #FFF;
+  .navbar-nav li a:hover, a:focus{
+    color: #F6A64C;
+    background-color: #FFF;
+  }  
+}
+
+.navbar-inverse .navbar-nav > .active > a {
+  color: white;
+  background-color: #F6A64C;
+  &:hover, &:focus {
+    color: white;
+    background-color: #F6A64C;
+  }
 }
 
 body {
