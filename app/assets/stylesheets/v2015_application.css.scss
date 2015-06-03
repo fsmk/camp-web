@@ -123,6 +123,12 @@ input, textarea, select {
   }  
 }
 
+.navbar-inverse .navbar-brand {
+  &:hover, &:focus {
+    color: #F6A64C;
+    background-color: transparent;
+  }
+}
 .navbar-inverse .navbar-nav > .active > a {
   color: white;
   background-color: #F6A64C;
@@ -135,4 +141,10 @@ input, textarea, select {
 body {
   background-color: #EC1322;
   color: #fff;
+}
+.orange {
+  color: #F6A64C;
+}
+a, a:focus, a:hover{
+  color: #F6A64C;
 }

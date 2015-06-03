@@ -1,7 +1,7 @@
 %script{src: "//cdn.jsdelivr.net/jquery.waterfall/0.1/jquery.waterfall.min.js"}
 .row
   .col-xs-12
-    %h2.green Speakers
+    %h2.orange Speakers
     -if @speakers.length > 0
       .row
         .col-md-12
@@ -21,4 +21,4 @@
                         .description=s.description.html_safe
     -else
       .alert.alert-info
-        Speakers info not updated
+        Speakers info will soon be updated.

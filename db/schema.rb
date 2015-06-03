@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150518180000) do
+ActiveRecord::Schema.define(version: 20150603175601) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -122,15 +122,17 @@ ActiveRecord::Schema.define(version: 20150518180000) do
     t.string   "college"
     t.string   "dept"
     t.string   "sem"
-    t.boolean  "getting_laptop", default: false
+    t.boolean  "getting_laptop",  default: false
     t.string   "city"
     t.string   "state"
     t.string   "email"
     t.string   "phone"
-    t.boolean  "previous_camp",  default: false
+    t.boolean  "previous_camp",   default: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "status",         default: "approved"
+    t.string   "status",          default: "approved"
+    t.integer  "camp_version_id", default: 1,          null: false
+    t.string   "track"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

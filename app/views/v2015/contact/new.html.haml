@@ -1,8 +1,8 @@
 .row
   .col-md-7
-    %h3.green Tell us about your ideas
-    %p.lead We'd love to know how we can help you and love hearing from new people.We'll get back to you  as soon as we can.
-    %h3.green
+    %h3.orange Tell us about your ideas
+    %p.lead We'd love to know how we can help you and love hearing from new people. We'll get back to you as soon as we can.
+    %h3.orange
       = "How to find us"
     %p.lead
       %address
@@ -17,7 +17,7 @@
         %br
         Email:
         %a{:href => "mailto:contact@fsmk.org"} contact@fsmk.org
-    %h3.green Get in touch
+    %h3.orange Get in touch
     %p.lead
       Rakesh - 7204044233
       %br
@@ -32,16 +32,16 @@
         =form_for @contact, url: v2015_contact_index_path, method: :post do | form |
           = render partial: 'v2015/shared/error_messages', locals: { object: @contact }
           .form-field.control-group
-            =form.label "Your name", class: 'green'
+            =form.label "Your name", class: 'orange'
             =form.text_field :name
             %br
-            =form.label "Email address", class: 'green'
+            =form.label "Email address", class: 'orange'
             =form.text_field :contact_email
             %br
-            =form.label "Mobile number", class: 'green'
+            =form.label "Mobile number", class: 'orange'
             =form.text_field :mobile
             %br
-            =form.label "Your message", class: 'green'
+            =form.label "Your message", class: 'orange'
             =form.text_area :message, rows: 5
             %br
             =form.submit "Send", class: 'btn-primary btn-danger pull-right', style:"width:50px;"

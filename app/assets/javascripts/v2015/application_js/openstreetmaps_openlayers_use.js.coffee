@@ -7,8 +7,8 @@ position = undefined
 $(document).on 'ready page:load', ->
   
   # Define variables for OpenLayers
-  center_lat = "12.9089389" # DSCE latitude
-  center_lon = "77.5664343" # DSCE CA longitude
+  center_lat = "13.114611" # REVA latitude
+  center_lon = "77.636444" # REVA longitude
   zoom = 15
   mapnik = new OpenLayers.Layer.OSM() # OpenStreetMap Layer
   projection_wgs = new OpenLayers.Projection("EPSG:4326") # WGS 1984
