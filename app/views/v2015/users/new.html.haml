@@ -4,6 +4,11 @@
       %h4.closed
         Registration has been closed. For any queries contact Rakesh (+91-7204044233) or Shijil (+91-8892324346)
   .col-sm-6
+    .row
+      .col-xs-12
+        %br
+        .jumbotron.text-center
+          %h4.date 2015 July 20 to 26
     %button.btn.btn-primary.btn-lg{"data-target" => "#register-modal", "data-toggle" => "modal"}
       Register Now
     #register-modal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
@@ -16,12 +21,7 @@
             = render partial: 'form'
           .modal-footer
             %button.btn.btn-default{"data-dismiss" => "modal", type: "button"} Close
-            %button.btn.btn-primary#register-button Register
-    .row
-      .col-xs-12
-        %br
-        .jumbotron.text-center
-          %h4.date 2015 July 20 to 26
+            %button.btn.btn-primary#register-button Register      
     =render :partial => 'v2015/shared/remaining_day_for_camp'
 - if @user.errors.any?
   :javascript

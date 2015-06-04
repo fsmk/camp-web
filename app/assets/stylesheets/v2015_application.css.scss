@@ -115,36 +115,53 @@ input, textarea, select {
 }
 
 .navbar-inverse{
-  background-color: #FFF;
-  border-color: #FFF;
+  background-color: #EC1322;
+  border-color: #EC1322;
   .navbar-nav li a:hover, a:focus{
     color: #F6A64C;
-    background-color: #FFF;
+    background-color: #EC1322;
+  }
+  .navbar-nav li a{
+    color: #FFF;
+    background-color: #EC1322;
   }  
 }
 
 .navbar-inverse .navbar-brand {
+  color: #FFF;
+  background-color: #EC1322;
   &:hover, &:focus {
     color: #F6A64C;
     background-color: transparent;
   }
+
 }
 .navbar-inverse .navbar-nav > .active > a {
-  color: white;
-  background-color: #F6A64C;
+  color: #F6A64C;
+  background-color: #EC1322;
   &:hover, &:focus {
     color: white;
-    background-color: #F6A64C;
+    background-color: #EC1322;
   }
 }
 
-body {
+/*body {
   background-color: #EC1322;
   color: #fff;
 }
+a, a:focus, a:hover{
+  color: #F6A64C;
+}
+*/
 .orange {
   color: #F6A64C;
 }
-a, a:focus, a:hover{
-  color: #F6A64C;
+.red-background {
+  background-color: #EC1322; 
+  color: #FFF;
+}
+.white-background {
+  background-color: #FFF; 
+  color: #9D9D9D;
+  height:100%;
 }
