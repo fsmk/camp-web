@@ -137,11 +137,11 @@ input, textarea, select {
 
 }
 .navbar-inverse .navbar-nav > .active > a {
-  color: #F6A64C;
-  background-color: #EC1322;
+  color: white;
+  background-color: rgba(236, 15, 15, 0.63);
   &:hover, &:focus {
     color: white;
-    background-color: #EC1322;
+    background-color: rgba(208, 1, 1, 1);
   }
 }
 
@@ -191,4 +191,20 @@ a, a:focus, a:hover{
 .navbar-brand {
   color: #46535e!important;
   background-color: #FFFFFF!important;
+}
+
+.col-sm-6 {
+  margin: 50px 10px;
+}
+
+.col-sm-12 {
+  margin: 20px 10px;
+}
+
+.col-sm-9 {
+  margin: 20px 0px;
+}
+
+.btn-primary {
+  margin: 10px;
 }
