@@ -3,10 +3,9 @@
   .col-xs-12
     .counter-container.text-center
       - if days > 1
-        %span.count
+        %div.count
           = days.to_i
-        %span.days days
-        .message Remaining for camp
+        .message Days remaining for camp
       - elsif days > 0
         .message Camp will start tomorrow
       - elsif days > -9

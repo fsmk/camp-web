@@ -18,7 +18,7 @@
 @import "./v2015/need_to_fix/volunteers";
 
 .pull-down{
-  margin-top: 60px;
+  margin-top: 50px;
 }
 
 #error_explanation {
@@ -177,4 +177,18 @@ a, a:focus, a:hover{
 
 .container {
   padding-left: 0!important;
+}
+
+#camp-nav-collaps {
+  background: white;
+}
+
+.navbar-inverse .navbar-nav li a {
+  color: #46535e;
+  background-color: #FFFFFF;
+}
+
+.navbar-brand {
+  color: #46535e!important;
+  background-color: #FFFFFF!important;
 }

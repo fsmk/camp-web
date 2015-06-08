@@ -1,23 +1,19 @@
 .ramining-days{
   .counter-container {
-    margin: 30px;
-    padding: 5px;
-    border-style: outset;
-    border-width: 2px;
+    background: white;
+    border-radius: 5px;
     .count {
-      font-style: italic;
-      border-color: #ffffff;
-      font-size: 100px;
-      color: #F6A64C;
-    }
-    .days {
-      font-style: italic;
-      font-size: 21px;
-      color: #F6A64C;
+  font-size: 70px;
+  display: inline-block;
+  color: #46535e;
+  font-weight: 500;
     }
     .message {
-      font-size: 20px;
-      color: #F6A64C;
+  font-size: 16px;
+  width: 30%;
+  color: #46535e;
+  text-align: left;
+  display: inline-block;
     }
   }
 }
