@@ -6,6 +6,6 @@ class User < ActiveRecord::Base
  belongs_to :camp_version
 
   def is_approvable version
-    version.users.count < 201
+    version.users.count < 401
   end
 end
