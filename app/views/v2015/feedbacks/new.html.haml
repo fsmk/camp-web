@@ -17,9 +17,9 @@
         =f.label :college
         =f.text_field :college, :class => 'form-control', placeholder: "College", size: "30", maxlength: "100", "data-bv-notempty" => "", "data-bv-notempty-message" => "College is required"
       .form-group
-        =f.label :role, "What was your role in the FSMSC14?"
+        =f.label :role, "What was your role in the #FSMKCAMP15?"
         %select.form-control{name: "feedback[role]"}
-          -["Participant", "Volunteer"].each do | v |
+          -["Participant", "Volunteer", "NA"].each do | v |
             %option
               = v
       .form-group
