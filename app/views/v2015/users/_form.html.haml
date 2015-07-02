@@ -56,12 +56,15 @@
             = form.label(:track_android, "Mobile App Development")
             %p
               .small 
-                Due to over-whelming response, we have had to close the registration for the android track.
+                Due to over-whelming response, we have had to close the registration for the Mobile App development track.
         .row
           .col-sm-1.col-sm-offset-1
-            = form.radio_button(:track, "sysad", checked: true)
+            = form.radio_button(:track, "sysad", disabled: true)
           .col-sm-9
             = form.label(:track_sysad, "System Administration and Networking")
+            %p
+              .small 
+                Due to over-whelming response, we have had to close the registration for the System Administration and Networking track.
         .row
           .col-sm-1.col-sm-offset-1
             = form.radio_button(:track, "hardware")
