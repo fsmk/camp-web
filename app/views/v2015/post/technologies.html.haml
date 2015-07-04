@@ -6,185 +6,98 @@
       FSMK Camps are focussed on introducing students to various free software technologies and give them enough insight to get started with the technology whichever they are interested. Breaking from single track concept where all students had to just follow the same track, we have now decided to burden the student to give more thought on what they are interested in and choose one amongst the multiple tracks. We assure all tracks will be equally good and will be delivered by best of the speakers. We are also for the first time experimenting with a separate Freedom Hardware track which has been a long standing demand from the students. Apart from the main tracks, we will have one hour talks on various technologies and ideas related to Free Software, Free Hardware, Free Spectrum and Free Society.
       %br/
       Please note that impromptu sessions if requested by students during the camp will be arranged on technologies which we are not covering in the main agenda based on the availability of the speakers.
-  %hr.featurette-divider
-  %h3.orange Tracks for the camp
-  #technologiesgroup.panel-group
-    .row
-      .col-sm-4
-        %a{"data-parent" => "#technologiesgroup", "data-toggle" => "collapse", href: "#android"}
-          %h4.orange Mobile App Development for Android Platform
-          %p
-            =image_tag "v2015/Android.png", alt: "Android", :class => "img-responsive"
-      .col-sm-4
-        %a{"data-parent" => "#technologiesgroup", "data-toggle" => "collapse", href: "#sysad"}
-          %h4.orange System Administration and Networking
-          %p
-            =image_tag "v2015/SysAdmin.png", alt: "System Administration", :class => "img-responsive"
-      .col-sm-4
-        %a{"data-parent" => "#technologiesgroup", "data-toggle" => "collapse", href: "#fh"}
-          %h4.orange Freedom Hardware
-          %p
-            =image_tag "v2015/FreedomHardware.png", alt: "Freedom Hardware", :class => "img-responsive"
-    .col-sm-12
-      #android.panel-collapse.collapse
-        .panel-body
-          %h3.orange Mobile App Development for Android Platform
-          %p.lead 
-          Mobile is the way through which millions of new users are going to use digital technology. Industry is looking for good mobile app developers and hence it is one of the important areas where student should gain expertise on. Android being open-source and one of the most popular mobile platform is ideal platform to learn mobile app development. Hence, we have decided to focus on App development on Android Platform. Following is the syllabus that we plan to cover in this track. 
-          %ul.list-group
-            %li.list
-              Introduction to Android
-            %li.list
-              Creating first app
-            %li.list
-              Introduce folder structure
-            %li.list
-              Drag and drop layout design
-            %li.list
-              Introduce XML
-            %li.list
-              Designing Layout using XML
-            %li.list
-              Continuation of designing layout using XML
-            %li.list
-              Java Programming
-            %li.list
-              Introduction to Android & Java
-            %li.list
-              Multiple activities
-            %li.list
-              WebView
-            %li.list
-              ListView
-            %li.list
-              Build Calculator
-            %li.list
-              Building APK
-        
-    .col-sm-12
-      #sysad.panel-collapse.collapse
-        .panel-body
-          %h3.orange System Administration and Networking
-          %p.lead 
-          Have you wondered what happens behind the scenes when you press enter after selecting the website name in your browser? How is the Googles/Facebooks/Twitters catering to millions of users simultaneously? How is the data stored in a remote server in some country thousands of kilometers far getting served to you on your browser? If these questions are intriguing to you, System Administration and Networking track is designed to answer all these questions and also help you setup your own laptop/desktop to work as a server and you its system administrator. BTW, did you know that experts suggest that for every 6 smartphone bought, there is one server that has to be run to cater to their needs. So again industry is in needs of good system administrator who know their system in and out and tweak to perform to the maximum. Following is the syllabus that we plan to cover in this track.
-          %ul.list-group
-            %li.list
-              GNU/Linux installation
-            %li.list
-              Bash
-            %li.list
-              Shell Scripting
-            %li.list
-              Data-center(One hour talk)
-            %li.list
-              Network Configuration
-            %li.list
-              BigData(One hour talk)
-            %li.list
-              Virtualization
-            %li.list
-              Containers
-            %li.list
-              Configuration Management
-            %li.list
-              Monitoring
-    .col-sm-12
-      #fh.panel-collapse.collapse
-        .panel-body
-          %h3.orange Freedom Hardware
-          %p.lead 
-          If India was late by around half a century to have telephones and two decades in case of computers, in case of Internet of Things India is going hand in hand with what is happening around the world. Freedom Hardware plays a crucial role in this because now it makes the cheap and 'Do It Yourself' hardware accessible to everyone across the world through the internet. We are too very excited with the possibilities and hence are bringing together this track for our students to learn it and create communities around it.We plan to cover wonderful hands-on Do-It-Yourself projects which should get students started in the vast world of Freedom Hardware. Following is the syllabus that we plan to cover in this track.
-          %ul.list-group
-            %li.list
-              Introduction to Open Hardware and the concept of Freedom Hardware
-            %li.list
-              Introduction to Basic terms with regards to Arduino
-            %li.list
-              Fritzing Introduction
-            %li.list
-              Fritzing continued
-            %li.list
-              Introduction to Arduino and Arduino programming
-            %li.list
-              Line Follower
-            %li.list
-              Object Detection and Competition for the participants
-            %li.list
-              Controlling motors and Different sensors with Arduino
-            %li.list
-              OpenCV
-    /
-      .row
+  .row
+    .col-md-12
       %hr.featurette-divider
-        .col-sm-4
-          %a{"data-parent" => "#technologiesgroup", "data-toggle" => "collapse", href: "#javascript"}
-            %h4.orange Javascript
-            %p
-              =image_tag "technology/Javascript.png", alt: "Javascript", :class => "img-responsive"
-        .col-sm-4
-          %a{"data-parent" => "#technologiesgroup", "data-toggle" => "collapse", href: "#mongoDB"}
-            %h4.orange MongoDB
-            %p
-              =image_tag "technology/MongoDB.png", alt: "MongoDB", :class => "img-responsive"
-        .col-sm-4
-          %a{"data-parent" => "#technologiesgroup", "data-toggle" => "collapse", href: "#nodeJs"}
-            %h4.orange Node.js
-            %p
-              =image_tag "technology/Node_Js.png", alt: "Node_Js", :class => "img-responsive"
-      .col-sm-12
-        #javascript.panel-collapse.collapse
-          .panel-body
-            %h3.orange Javascript
-            %p.lead 
-            Javascript is a dynamic programming language, mainly used as part of web browsers for client side scripting to interact with the user, control the browser and communicate asynchronously and alter the content displayed on the browser. It is now also used popularly for game development and mobile app development.
-      .col-sm-12
-        #mongoDB.panel-collapse.collapse
-          .panel-body
-            %h3.orange MongoDB
-            %p.lead 
-            MongoDB, a very popular NoSQL database, uses JSON-like documents with dynamic schemas. It is becoming very popular in developing web applications as it makes it very easy to develop and deploy the application.
-      .col-sm-12
-        #nodeJs.panel-collapse.collapse
-          .panel-body
-            %h3.orange Node.js
-            %p.lead 
-            Node.js is a software platform for scalable server-side and networking applications. Node.js applications are written in JavaScript, and can be run across multiple platforms with no changes using Node.js runtime. Node.js is commonly used for real time applications due to its asynchronous nature.
+      %h3.orange Tracks for the camp
       .row
-      %hr.featurette-divider
-        .col-sm-4
-          %a{"data-parent" => "#technologiesgroup", "data-toggle" => "collapse", href: "#massSurveillance"}
-            %h4.orange Mass Surveillance
-            %p
-              =image_tag "technology/Mass_Surveillance.png", alt: "Mass_Surveillance", :class => "img-responsive"
-        .col-sm-4
-          %a{"data-parent" => "#technologiesgroup", "data-toggle" => "collapse", href: "#onlinePrivacyTools"}
-            %h4.orange Online Privacy Tools
-            %p
-              =image_tag "technology/Online_Privacy_Tools.png", alt: "Online_Privacy_Tools", :class => "img-responsive"
-        .col-sm-4
-          %a{"data-parent" => "#technologiesgroup", "data-toggle" => "collapse", href: "#handsOnProject"}
-            %h4.orange Hands-on Project
-            %p
-              =image_tag "technology/Hands_On_Project.png", alt: "Hands_On_Project", :class => "img-responsive"
-      .col-sm-12
-        #massSurveillance.panel-collapse.collapse
-          .panel-body
-            %h3.orange Mass Surveillance
-            %p.lead 
-            June 5th will mark the one year anniversary of the Snowden Leaks of NSA's mass surveillance. Since that day, we have seen many documents which have been released which shows us how vested interests have been using internet to curtail our freedom and intrude into our private lives. Hence it is very important to us as to how such mass surveillance effects us as individuals.
-      .col-sm-12
-        #onlinePrivacyTools.panel-collapse.collapse
-          .panel-body
-            %h3.orange Online Privacy Tools
-            %p.lead 
-            Free Software has always respected user's privacy. However when it comes to internet, it is not just what runs on your system that is important but also how you exchange information with others over the net. It is also important to understand what data you put online and with whom you are going to share the same. Hence for all this, it becomes important to learn how to use these free software tools which help you protect your privacy. A good list of such tools are shared
-            %a{href: "http://prismbreak.org/", alt: "Prism Break" }here.
-            
-      .col-sm-12
-        #handsOnProject.panel-collapse.collapse
-          .panel-body
-            %h3.orange Hands-on Project
-            %p.lead 
-            To keep it practical as much as possible will be our intention through out the camp. But even other wise, we want to allocate time specifically so that participants can work on some small projects in a group. We hope that this will give participants a good understanding of how different things fall together when developing a complete project. We also plan to recognize the group with best projects.
-
-        
+        .col-md-4
+          .thumbnail
+            =image_tag "v2015/Android.png", alt: "Android", :class => "fixed"
+            .caption
+              %h3.orange Mobile App Development for Android Platform
+              %p
+                Mobile is the way through which millions of new users are going to use digital technology. Industry is looking for good mobile app developers and hence it is one of the important areas where student should gain expertise on. Android being open-source and one of the most popular mobile platform is ideal platform to learn mobile app development. Hence, we have decided to focus on App development on Android Platform. Following is the syllabus that we plan to cover in this track.
+                %ul
+                  %li
+                    Introduction to Android
+                  %li
+                    Creating first app
+                  %li
+                    Introduce folder structure
+                  %li
+                    Drag and drop layout design
+                  %li
+                    Introduce XML
+                  %li
+                    Designing Layout using XML
+                  %li
+                    Continuation of designing layout using XML
+                  %li
+                    Java Programming
+                  %li
+                    Introduction to Android & Java
+                  %li
+                    Multiple activities
+                  %li
+                    WebView
+                  %li
+                    ListView
+                  %li
+                    Build Calculator
+                  %li
+                    Building APK
+        .col-md-4
+          .thumbnail
+            =image_tag "v2015/SysAdmin.png", alt: "System Administration", :class => "fixed"
+            .caption
+              %h3.orange System Administration and Networking
+              %p
+                Have you wondered what happens behind the scenes when you press enter after selecting the website name in your browser? How is the Googles/Facebooks/Twitters catering to millions of users simultaneously? How is the data stored in a remote server in some country thousands of kilometers far getting served to you on your browser? If these questions are intriguing to you, System Administration and Networking track is designed to answer all these questions and also help you setup your own laptop/desktop to work as a server and you its system administrator. BTW, did you know that experts suggest that for every 6 smartphone bought, there is one server that has to be run to cater to their needs. So again industry is in needs of good system administrator who know their system in and out and tweak to perform to the maximum. Following is the syllabus that we plan to cover in this track.
+                %ul
+                  %li
+                    GNU/Linux installation
+                  %li
+                    Bash
+                  %li
+                    Shell Scripting
+                  %li
+                    Data-center(One hour talk)
+                  %li
+                    Network Configuration
+                  %li
+                    BigData(One hour talk)
+                  %li
+                    Virtualization
+                  %li
+                    Containers
+                  %li
+                    Configuration Management
+                  %li
+                    Monitoring
+        .col-md-4
+          .thumbnail
+            =image_tag "v2015/FreedomHardware.png", alt: "Freedom Hardware", :class => "fixed"
+            .caption
+              %h3.orange Freedom Hardware
+              %p.lead
+                If India was late by around half a century to have telephones and two decades in case of computers, in case of Internet of Things India is going hand in hand with what is happening around the world. Freedom Hardware plays a crucial role in this because now it makes the cheap and 'Do It Yourself' hardware accessible to everyone across the world through the internet. We are too very excited with the possibilities and hence are bringing together this track for our students to learn it and create communities around it.We plan to cover wonderful hands-on Do-It-Yourself projects which should get students started in the vast world of Freedom Hardware. Following is the syllabus that we plan to cover in this track.
+                %ul
+                  %li
+                    Introduction to Open Hardware and the concept of Freedom Hardware
+                  %li
+                    Introduction to Basic terms with regards to Arduino
+                  %li
+                    Fritzing Introduction
+                  %li
+                    Fritzing continued
+                  %li
+                    Introduction to Arduino and Arduino programming
+                  %li
+                    Line Follower
+                  %li
+                    Object Detection and Competition for the participants
+                  %li
+                    Controlling motors and Different sensors with Arduino
+                  %li
+                    OpenCV
