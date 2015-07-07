@@ -83,3 +83,4 @@ gem 'openlayers-rails'
 gem "paperclip"
 
 gem 'jquery-ui-rails'
+gem 'vertical-timeline-rails'

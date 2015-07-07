@@ -1,4 +1,17 @@
-%h3.orange Camp Schedule
-We will be experimenting with multiple tracks this time. This is to ensure that students get to learn exactly what they are interested in and also to ensure we get the best subject matter experts. The three tracks for this camp is Mobile App Development for Android Platform, System Administration and Networking, and Freedom Hardware. Yes you read it right, we are having a separate track for Freedom Hardware this time. This has been a long standing demand from our students and we are excited to offer them the same.
+.row
+  .col-xs-12
+    %h3.orange Camp Schedule
+.fsmk-time-line
+  .row.cssanimations
+    .col-xs-12
+      -tis = @version.timeline_items.order(:at)
+      - if tis.count > 0
+        %section.cd-container#cd-timeline
+          -tis.each do |ti|
+            = timeline_container(ti.title, ti.at, "v2015/s_icons/#{(ti.image_icon.present? ? ti.image_icon : 'common')}.svg") do
+              =ti.html.html_safe
+      - else
+        We will be experimenting with multiple tracks this time. This is to ensure that students get to learn exactly what they are interested in and also to ensure we get the best subject matter experts. The three tracks for this camp is Mobile App Development for Android Platform, System Administration and Networking, and Freedom Hardware. Yes you read it right, we are having a separate track for Freedom Hardware this time. This has been a long standing demand from our students and we are excited to offer them the same.
 
-%h4.orange Schedule will be added very soon.
+        %h4.orange Schedule will be added very soon.
+          

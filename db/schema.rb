@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150603175601) do
+ActiveRecord::Schema.define(version: 20150707201133) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -113,6 +113,16 @@ ActiveRecord::Schema.define(version: 20150603175601) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "camp_version_id",    default: 1, null: false
+  end
+
+  create_table "timeline_items", force: true do |t|
+    t.string   "title",                       null: false
+    t.text     "html",                        null: false
+    t.datetime "at",                          null: false
+    t.string   "image_icon"
+    t.integer  "camp_version_id", default: 1, null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", force: true do |t|
