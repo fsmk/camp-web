@@ -49,6 +49,7 @@ FsmkCampWebsite::Application.routes.draw do
     get '/speakers' => 'post#speakers'
     get '/technologies' => 'post#technologies'
     get '/sponsors' => 'post#sponsors'
+    get '/sponsor_policy' => "post#sponsor_policy"
     get '/gallery' => 'post#gallery'
     get '/venue' => 'post#venue'
     get '/scholarship' => 'post#scholarship'
