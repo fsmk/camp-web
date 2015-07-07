@@ -217,3 +217,14 @@ a, a:focus, a:hover{
   height: 130px;
   padding: 8px;
 }
+
+.sponsor{
+  .logo{
+    max-width: 80%;
+    @extend .center-block;
+  }
+}
+.box-info{
+  padding: 20px;
+  margin-bottom: 40px;
+}
