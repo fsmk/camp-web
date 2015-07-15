@@ -1,5 +1,5 @@
 ActiveAdmin.register Volunteer do
-  permit_params :name, :email, :gender, :sem, :college, :branch, :phone, :getting_laptop, :previous_camp, :ready_to_pay, :t_shirt_size, :status, :git_url, :description, :photo
+  permit_params :name, :email, :gender, :sem, :college, :branch, :phone, :getting_laptop, :previous_camp, :ready_to_pay, :t_shirt_size, :status, :git_url, :description, :photo, :camp_version_id
 
   index do
     selectable_column
@@ -76,6 +76,7 @@ ActiveAdmin.register Volunteer do
       f.input :git_url
       f.input :description, label: "Description (HTML)"
       f.input :photo, label: "Photo (Passport size)", :required => false, :as => :file
+      f.input :camp_version
     end
     f.actions
   end

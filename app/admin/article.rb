@@ -1,5 +1,5 @@
 ActiveAdmin.register Article do
-  permit_params :name, :body, :event_date, :added_by
+  permit_params :name, :body, :event_date, :added_by, :camp_version_id
 
   # permitted_params do
   #   permitted = [:name, :body, :event_date, :added_by]
